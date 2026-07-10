@@ -13,10 +13,9 @@
     .story-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
     @media (min-width: 900px) { .story-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
     .story-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 48px; }
-    @media (min-width: 768px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
-    .gallery-grid .tall { grid-row: span 2; }
-    .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+    .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 48px; max-width: 960px; margin-left: auto; margin-right: auto; }
+    .gallery-grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 2px; }
+    @media (min-width: 768px) { .gallery-grid { grid-template-columns: 1fr 1fr 1fr; } .gallery-grid img { height: 260px; } }
     .menu-teaser-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
     @media (min-width: 900px) { .menu-teaser-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
     .menu-teaser-items { list-style: none; padding: 0; margin: 28px 0 0; }
@@ -124,9 +123,9 @@
     <div class="wrap">
       <div class="story-grid">
         <div>
-          <p class="eyebrow" data-i18n="story_eyebrow">— IL TUO POSTO A PIENZA</p>
-          <h2 class="heading-xl" data-i18n="story_heading">Qualunque sia la tua giornata</h2>
-          <p class="body-text" style="margin-top:24px" data-i18n="story_body">La classica colazione italiana con caffè e brioche, oppure pancake, french toast e centrifuga per viziarti un po'. Una colazione salata con verdure fresche, omelette, prosciutto e formaggio. Un pranzo tipico toscano con pici fatti a mano e taglieri della Val d'Orcia. O semplicemente un aperitivo con gli amici, tra stuzzichini, spritz e un buon calice di Nobile. A Le Cinque Lune c'è sempre un buon motivo per sedersi.</p>
+          <p class="eyebrow" data-i18n="story_eyebrow">— PIENZA, DALLA COLAZIONE ALL'APERITIVO</p>
+          <h2 class="heading-xl" data-i18n="story_heading">Sei nel posto giusto</h2>
+          <p class="body-text" style="margin-top:24px" data-i18n="story_body">Brioche e cappuccino, pancake e centrifughe fresche. Pici tirati a mano, taglieri con pecorino di Pienza e salumi toscani. Spritz, Nobile di Montepulciano e stuzzichini al tramonto. A Le Cinque Lune ogni momento della giornata diventa il migliore — e ogni scusa è buona per restare.</p>
           <div class="story-tags">
             <span class="story-tag" data-i18n="story_tag_pastry">Colazione</span>
             <span class="story-tag" data-i18n="story_tag_brunch">Brunch</span>
@@ -163,8 +162,8 @@
     <div class="wrap">
       <div class="text-center" style="max-width:640px; margin:0 auto">
         <p class="eyebrow" data-i18n="menu_teaser_eyebrow">— GOLA</p>
-        <h2 class="heading-lg" data-i18n="menu_teaser_heading">Dalla brioche al tramonto</h2>
-        <p class="body-text" style="margin-top:16px" data-i18n="menu_teaser_body">Colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, e una cantina che non si prende troppo sul serio. Il menu completo, in quattro lingue.</p>
+        <h2 class="heading-lg" data-i18n="menu_teaser_heading">Dalla colazione all'aperitivo</h2>
+        <p class="body-text" style="margin-top:16px" data-i18n="menu_teaser_body">I nostri piatti: colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, dolci fatti in casa e gelato artigianale.</p>
         <a href="menu.html" class="btn btn-outline-navy" style="margin-top:28px" data-i18n="menu_teaser_cta">Vedi tutto il menu →</a>
       </div>
 
@@ -230,7 +229,7 @@
         <p class="body-text" style="margin-top:16px" data-i18n="gallery_body">Vicoli di pietra, campanili silenziosi e colline che si perdono all'orizzonte: Pienza è la cornice quotidiana della nostra tavola.</p>
       </div>
       <div class="gallery-grid">
-        <div class="hover-zoom tall">
+        <div class="hover-zoom">
           <img src="immagini/federico-di-dio-photography-imDFBYDnqI0-unsplash.jpg" alt="Vicolo fiorito di Pienza">
           <span class="photo-credit">Federico Di Dio / Unsplash</span>
         </div>
@@ -285,9 +284,9 @@
     "hero_eyebrow":{"it":"PIENZA · TOSCANA","en":"PIENZA · TUSCANY","ko":"피엔차 · 토스카나","ru":"ПЬЕНЦА · ТОСКАНА"},
     "hero_tagline":{"it":"Pasticceria, Caffè e Taverna nel cuore di Pienza.","en":"Pastry, Coffee and Taverna in the heart of Pienza.","ko":"피엔차 중심부의 페이스트리, 카페 그리고 타베르나.","ru":"Кондитерская, кафе и таверна в самом сердце Пьенцы."},
     "hero_cta":{"it":"Scopri il Menu","en":"View the Menu","ko":"메뉴 보기","ru":"Смотреть меню"},
-    "story_eyebrow":{"it":"— IL TUO POSTO A PIENZA","en":"— YOUR PLACE IN PIENZA","ko":"— 피엔차에서 당신의 자리","ru":"— ВАШЕ МЕСТО В ПЬЕНЦЕ"},
-    "story_heading":{"it":"Qualunque sia la tua giornata","en":"Whatever your day looks like","ko":"어떤 하루를 보내든","ru":"Каким бы ни был ваш день"},
-    "story_body":{"it":"La classica colazione italiana con caffè e brioche, oppure pancake, french toast e centrifuga per viziarti un po'. Una colazione salata con verdure fresche, omelette, prosciutto e formaggio. Un pranzo tipico toscano con pici fatti a mano e taglieri della Val d'Orcia. O semplicemente un aperitivo con gli amici, tra stuzzichini, spritz e un buon calice di Nobile. A Le Cinque Lune c'è sempre un buon motivo per sedersi.","en":"A classic Italian breakfast with coffee and brioche, or pancakes, french toast and a fresh juice to treat yourself. A savoury breakfast with fresh vegetables, omelette, ham and cheese. A traditional Tuscan lunch with hand-rolled pici and Val d'Orcia charcuterie boards. Or simply an aperitivo with friends — nibbles, spritz and a fine glass of Nobile. At Le Cinque Lune, there's always a good reason to sit down.","ko":"커피와 브리오슈로 즐기는 클래식 이탈리안 아침, 혹은 팬케이크와 프렌치 토스트, 착즙 주스로 자신을 위한 특별한 아침. 신선한 채소와 오믈렛, 햄과 치즈의 든든한 조식. 수제 피치 파스타와 발도르차 타글리에레로 이루어진 정통 토스카나 점심. 또는 친구들과 함께하는 아페리티보 — 스투치키니, 스프리츠, 그리고 노빌레 한 잔. 레 친퀘 루네에는 언제나 앉을 이유가 있습니다.","ru":"Классический итальянский завтрак с кофе и бриошью или панкейки, французские тосты и фреш, чтобы побаловать себя. Солёный завтрак со свежими овощами, омлетом, ветчиной и сыром. Традиционный тосканский обед с пастой пичи ручной работы и тарелками из Валь д'Орча. Или просто аперитив с друзьями — закуски, шприц и бокал Нобиле. В Le Cinque Lune всегда есть повод присесть."},
+    "story_eyebrow":{"it":"— PIENZA, DALLA COLAZIONE ALL'APERITIVO","en":"— PIENZA, FROM BREAKFAST TO APERITIVO","ko":"— 피엔차, 아침부터 아페리티보까지","ru":"— ПЬЕНЦА, ОТ ЗАВТРАКА ДО АПЕРИТИВА"},
+    "story_heading":{"it":"Sei nel posto giusto","en":"You're in the right place","ko":"바로 여기가 그곳입니다","ru":"Вы в правильном месте"},
+    "story_body":{"it":"Brioche e cappuccino, pancake e centrifughe fresche. Pici tirati a mano, taglieri con pecorino di Pienza e salumi toscani. Spritz, Nobile di Montepulciano e stuzzichini al tramonto. A Le Cinque Lune ogni momento della giornata diventa il migliore — e ogni scusa è buona per restare.","en":"Brioche and cappuccino, pancakes and fresh juices. Hand-rolled pici, boards with Pienza pecorino and Tuscan charcuterie. Spritz, Nobile di Montepulciano and nibbles at sunset. At Le Cinque Lune every moment of the day becomes the best one — and every excuse is a good one to stay.","ko":"브리오슈와 카푸치노, 팬케이크와 신선한 착즙 주스. 수제 피치 파스타, 피엔차 페코리노와 토스카나 살루미 타글리에레. 일몰의 스프리츠, 노빌레 디 몬테풀치아노와 스투치키니. 레 친퀘 루네에서는 하루의 모든 순간이 최고가 됩니다 — 머물 핑계는 언제나 넘칩니다.","ru":"Бриошь и капучино, панкейки и свежие соки. Паста пичи ручной работы, тарелки с пекорино из Пьенцы и тосканскими салуми. Шприц, Нобиле ди Монтепульчано и закуски на закате. В Le Cinque Lune каждый момент дня становится лучшим — и всегда найдётся повод остаться."},
     "story_tag_pastry":{"it":"Colazione","en":"Breakfast","ko":"아침 식사","ru":"Завтрак"},
     "story_tag_cafe":{"it":"Pranzo","en":"Lunch","ko":"점심","ru":"Обед"},
     "story_tag_brunch":{"it":"Brunch","en":"Brunch","ko":"브런치","ru":"Бранч"},
@@ -301,8 +300,8 @@
     "gallery_heading":{"it":"Un angolo di Val d'Orcia","en":"A corner of Val d'Orcia","ko":"발도르차의 한 모퉁이","ru":"Уголок Валь д'Орча"},
     "gallery_body":{"it":"Vicoli di pietra, campanili silenziosi e colline che si perdono all'orizzonte: Pienza è la cornice quotidiana della nostra tavola.","en":"Stone alleyways, quiet bell towers and hills fading into the horizon: Pienza is the everyday backdrop to our table.","ko":"돌로 이루어진 골목길, 고요한 종탑, 그리고 지평선 너머로 이어지는 언덕들. 피엔차는 우리 식탁의 일상적인 배경입니다.","ru":"Каменные переулки, тихие колокольни и холмы, уходящие за горизонт: Пьенца — это ежедневная декорация нашего стола."},
     "menu_teaser_eyebrow":{"it":"— GOLA","en":"— TASTE","ko":"— 맛","ru":"— ВКУС"},
-    "menu_teaser_heading":{"it":"Dalla brioche al tramonto","en":"From morning brioche to sunset","ko":"아침 브리오슈부터 일몰까지","ru":"От утренней бриоши до заката"},
-    "menu_teaser_body":{"it":"Colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, e una cantina che non si prende troppo sul serio. Il menu completo, in quattro lingue.","en":"Sweet and savoury breakfasts, properly hand-rolled pici, boards from the Val d'Orcia, and a cellar that doesn't take itself too seriously. The full menu, in four languages.","ko":"달콤하고 짭짤한 아침 식사, 제대로 손으로 만든 피치 파스타, 발도르차의 플래터, 그리고 너무 진지하지 않은 와인 셀렉션까지. 전체 메뉴를 4개 언어로 만나보세요.","ru":"Сладкие и солёные завтраки, паста пичи ручной работы, тосканские тарелки и винный погреб без лишней серьёзности. Полное меню на четырёх языках."},
+    "menu_teaser_heading":{"it":"Dalla colazione all'aperitivo","en":"From breakfast to aperitivo","ko":"아침부터 아페리티보까지","ru":"От завтрака до аперитива"},
+    "menu_teaser_body":{"it":"I nostri piatti: colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, dolci fatti in casa e gelato artigianale.","en":"Our dishes: sweet and savoury breakfasts, properly hand-rolled pici, boards from the Val d'Orcia, homemade desserts and artisan gelato.","ko":"저희 요리: 달콤하고 짭짤한 아침 식사, 수제 피치 파스타, 발도르차의 플래터, 직접 만든 디저트와 수제 젤라토.","ru":"Наши блюда: сладкие и солёные завтраки, паста пичи ручной работы, тарелки из Валь д'Орча, домашние десерты и ремесленное джелато."},
     "menu_teaser_cta":{"it":"Vedi tutto il menu →","en":"See the full menu →","ko":"전체 메뉴 보기 →","ru":"Смотреть меню полностью →"},
     "visit_eyebrow":{"it":"— VIENI A TROVARCI","en":"— COME VISIT US","ko":"— 방문해 주세요","ru":"— ПРИХОДИТЕ К НАМ"},
     "visit_heading":{"it":"Largo Roma 1, Pienza","en":"Largo Roma 1, Pienza","ko":"Largo Roma 1, 피엔차","ru":"Ларго Рома 1, Пьенца"},
