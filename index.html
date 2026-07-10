@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Cinque Lune — Pasticceria · Caffè · Taverna · Pienza</title>
+  <meta name="description" content="Pasticceria, caffè e taverna nel cuore di Pienza, Toscana. Colazioni, pici fatti a mano, taglieri della Val d'Orcia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="files/style.css">
+  <style>
+    .story-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    @media (min-width: 900px) { .story-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+    .story-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 48px; }
+    @media (min-width: 768px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
+    .gallery-grid .tall { grid-row: span 2; }
+    .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+    .menu-teaser-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    @media (min-width: 900px) { .menu-teaser-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+    .menu-teaser-items { list-style: none; padding: 0; margin: 28px 0 0; }
+    .menu-teaser-items li { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px dotted rgba(250,245,234,0.2); font-family: 'Fraunces', serif; font-size: 17px; }
+    .menu-teaser-items .price { color: var(--gold-light); font-style: italic; }
+    .visit-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+    @media (min-width: 768px) { .visit-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+    .hours-list { list-style: none; padding: 0; margin: 24px 0 0; }
+    .hours-list li { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(28,41,66,0.1); font-size: 15px; }
+    .hours-label { font-weight: 600; color: var(--ink); }
+    .hours-time { color: var(--ink-faint); }
+    .hero-title { font-family: 'Fraunces', serif; font-size: 52px; line-height: 1.08; font-weight: 500; color: #fff; margin: 16px 0; }
+    @media (min-width: 768px) { .hero-title { font-size: 76px; } }
+    .hero-tagline { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+    .hero-eyebrow { font-size: 13px; letter-spacing: 0.28em; font-weight: 700; color: var(--gold-light); }
+    .mobile-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-toggle span { display: block; width: 22px; height: 1.5px; background: var(--navy); transition: 0.3s; }
+    @media (min-width: 860px) { .mobile-toggle { display: none; } }
+    .mobile-nav { display: none; padding: 16px 24px; border-top: 1px solid rgba(28,41,66,0.1); }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a { display: block; padding: 12px 0; font-size: 14px; letter-spacing: 0.12em; font-weight: 600; text-transform: uppercase; color: var(--ink-soft); }
+    @media (min-width: 860px) { .mobile-nav { display: none !important; } }
+    .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 48px; }
+    @media (min-width: 768px) { .food-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+    @media (min-width: 1024px) { .food-grid { grid-template-columns: repeat(5, 1fr); } }
+    .food-grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 2px; }
+    .food-tile { position: relative; overflow: hidden; border-radius: 2px; }
+    .food-tile img { transition: transform 1.3s cubic-bezier(0.22,1,0.36,1); }
+    .food-tile:hover img { transform: scale(1.06); }
+    .food-tile .food-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 32px 14px 12px;
+      background: linear-gradient(0deg, rgba(14,22,38,0.75) 0%, transparent 100%);
+      color: var(--cream); font-family: 'Fraunces', serif; font-size: 15px; font-weight: 500;
+      opacity: 0; transition: opacity 0.4s;
+    }
+    .food-tile:hover .food-label { opacity: 1; }
+    .food-section-title {
+      font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; font-style: italic;
+      color: var(--gold-deep); margin: 48px 0 24px; text-align: center;
+    }
+    .food-section-title:first-of-type { margin-top: 40px; }
+    .photo-credit {
+      position: absolute; bottom: 6px; right: 8px;
+      font-size: 10px; color: rgba(255,255,255,0.5);
+      font-family: 'Manrope', sans-serif; letter-spacing: 0.02em;
+      pointer-events: none;
+    }
+    .gallery-grid .hover-zoom { position: relative; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo/logo_orizzontale_v2.svg" alt="Le Cinque Lune">
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a>
+          <a href="menu.html" class="nav-link" data-i18n="nav_menu">Menu</a>
+        </div>
+        <div class="nav-right">
+          <div class="lang-switch">
+            <button class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="true">
+              IT
+              <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="lang-menu" id="langMenu" role="menu">
+              <button class="lang-option active" data-lang="it" role="menuitem">Italiano <small>IT</small></button>
+              <button class="lang-option" data-lang="en" role="menuitem">English <small>EN</small></button>
+              <button class="lang-option" data-lang="ko" role="menuitem">한국어 <small>KO</small></button>
+              <button class="lang-option" data-lang="ru" role="menuitem">Русский <small>RU</small></button>
+            </div>
+          </div>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="menu.html" data-i18n="nav_menu">Menu</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <img src="immagini/doozydoom-_v5HCKSZOkA-unsplash.jpg" alt="Campagna toscana con cipressi panoramici">
+    <span class="photo-credit" style="z-index:11">Photo: Doozydoom / Unsplash</span>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow reveal d1" data-i18n="hero_eyebrow">PIENZA · TOSCANA</span>
+      <h1 class="hero-title reveal d2">Le Cinque Lune</h1>
+      <p class="hero-tagline reveal d3" data-i18n="hero_tagline">Pasticceria, Caffè e Taverna nel cuore di Pienza.</p>
+      <a href="menu.html" class="btn btn-gold reveal d4" data-i18n="hero_cta">Scopri il Menu</a>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="section" id="storia">
+    <div class="wrap">
+      <div class="story-grid">
+        <div>
+          <p class="eyebrow" data-i18n="story_eyebrow">— IL TUO POSTO A PIENZA</p>
+          <h2 class="heading-xl" data-i18n="story_heading">Qualunque sia la tua giornata</h2>
+          <p class="body-text" style="margin-top:24px" data-i18n="story_body">La classica colazione italiana con caffè e brioche, oppure pancake, french toast e centrifuga per viziarti un po'. Una colazione salata con verdure fresche, omelette, prosciutto e formaggio. Un pranzo tipico toscano con pici fatti a mano e taglieri della Val d'Orcia. O semplicemente un aperitivo con gli amici, tra stuzzichini, spritz e un buon calice di Nobile. A Le Cinque Lune c'è sempre un buon motivo per sedersi.</p>
+          <div class="story-tags">
+            <span class="story-tag" data-i18n="story_tag_pastry">Colazione</span>
+            <span class="story-tag" data-i18n="story_tag_brunch">Brunch</span>
+            <span class="story-tag" data-i18n="story_tag_cafe">Pranzo</span>
+            <span class="story-tag" data-i18n="story_tag_taverna">Aperitivo</span>
+            <span class="story-tag" data-i18n="story_tag_cocktail">Cocktail</span>
+          </div>
+
+          <div style="margin-top:48px; padding-top:36px; border-top:1px solid rgba(28,41,66,0.12)">
+            <p class="eyebrow" data-i18n="family_eyebrow">— NUOVA APERTURA · LUGLIO 2026</p>
+            <p class="body-text" style="margin-top:12px" data-i18n="family_body">Le Cinque Lune è un sogno di famiglia diventato realtà. Mauro e Marianna hanno aperto le porte di questo locale nel cuore di Pienza a luglio 2026. Insieme al piccolo Alex, vi accolgono ogni giorno con la passione di chi crede che ogni piatto e ogni caffè meritino cura e autenticità.</p>
+          </div>
+        </div>
+        <div class="hover-zoom" style="border-radius:2px">
+          <img src="immagini/Gemini_Generated_Image_s6jy8s6jy8s6jy8s.png" alt="Pienza, vicolo toscano">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOON DIVIDER ===== -->
+  <div style="padding:24px 0; text-align:center;">
+    <div class="moon-divider gold">
+      <svg class="m" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="7"/></svg>
+      <svg class="m" width="14" height="14" viewBox="0 0 14 14"><path d="M7 0a7 7 0 010 14A5.5 5.5 0 007 0z"/></svg>
+      <svg class="m" width="14" height="14" viewBox="0 0 14 14"><path d="M7 0a7 7 0 010 14 7 7 0 000-14z"/><path d="M7 2a5 5 0 010 10A3.5 3.5 0 007 2z" fill="var(--cream)"/></svg>
+      <svg class="m" width="14" height="14" viewBox="0 0 14 14"><path d="M7 14a7 7 0 010-14A5.5 5.5 0 007 14z"/></svg>
+      <svg class="m" width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="3"/></svg>
+    </div>
+  </div>
+
+  <!-- ===== FOOD GALLERY ===== -->
+  <section class="section" id="gola">
+    <div class="wrap">
+      <div class="text-center" style="max-width:640px; margin:0 auto">
+        <p class="eyebrow" data-i18n="menu_teaser_eyebrow">— GOLA</p>
+        <h2 class="heading-lg" data-i18n="menu_teaser_heading">Dalla brioche al tramonto</h2>
+        <p class="body-text" style="margin-top:16px" data-i18n="menu_teaser_body">Colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, e una cantina che non si prende troppo sul serio. Il menu completo, in quattro lingue.</p>
+        <a href="menu.html" class="btn btn-outline-navy" style="margin-top:28px" data-i18n="menu_teaser_cta">Vedi tutto il menu →</a>
+      </div>
+
+      <p class="food-section-title" data-i18n="food_section_1">Dalla colazione al pranzo</p>
+      <div class="food-grid">
+        <div class="food-tile"><img src="piatti/avocado-toast-omelette.png" alt="Avocado toast e omelette"><span class="food-label">Avocado toast & Omelette</span></div>
+        <div class="food-tile"><img src="piatti/pancake-frutta-panna.png" alt="Pancake con frutta e panna"><span class="food-label">Pancake</span></div>
+        <div class="food-tile"><img src="piatti/pici-ragu-cinghiale.png" alt="Pici al ragù di cinghiale"><span class="food-label">Pici al ragù di cinghiale</span></div>
+        <div class="food-tile"><img src="piatti/tagliere-salumi-formaggi.png" alt="Tagliere salumi e formaggi toscani"><span class="food-label">Tagliere Cinque Lune</span></div>
+        <div class="food-tile"><img src="piatti/anatra-arancia-verdure.png" alt="Anatra all'arancia con verdure"><span class="food-label">Anatra all'arancia</span></div>
+        <div class="food-tile"><img src="piatti/parmigiana-melanzane.jpg" alt="Parmigiana di melanzane"><span class="food-label">Parmigiana di melanzane</span></div>
+        <div class="food-tile"><img src="piatti/gnocchi-semolino-tartufo.png" alt="Gnocchi al semolino con crema di parmigiano e tartufo"><span class="food-label">Gnocchi al semolino</span></div>
+        <div class="food-tile"><img src="piatti/ravioli-ricotta-spinaci.png" alt="Ravioli ricotta e spinaci con burro e salvia"><span class="food-label">Ravioli ricotta e spinaci</span></div>
+      </div>
+
+      <p class="food-section-title" data-i18n="food_section_2">Le nostre coppe gelato artigianali</p>
+      <div class="food-grid">
+        <div class="food-tile"><img src="piatti/tiramisu.jpeg" alt="Tiramisù"><span class="food-label">Tiramisù</span></div>
+        <div class="food-tile"><img src="piatti/panna-cotta-frutti-bosco.jpeg" alt="Panna cotta ai frutti di bosco"><span class="food-label">Panna cotta</span></div>
+        <div class="food-tile"><img src="piatti/coppa-gelato-lotus.jpeg" alt="Coppa gelato Lotus"><span class="food-label">Coppa Lotus</span></div>
+        <div class="food-tile"><img src="piatti/banana-split-gelato.jpeg" alt="Banana split"><span class="food-label">Banana split</span></div>
+        <div class="food-tile"><img src="piatti/banana-split-ciliegie.jpeg" alt="Banana split con ciliegie"><span class="food-label">Banana split</span></div>
+        <div class="food-tile"><img src="piatti/gelato-smile-bambini.jpeg" alt="Gelato Smile per bambini"><span class="food-label">Smile</span></div>
+        <div class="food-tile"><img src="piatti/medovik-torta-miele.jpeg" alt="Medovik — torta al miele a strati"><span class="food-label">Medovik</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIENI A TROVARCI (orari + mappa) ===== -->
+  <section class="section section-navy grain" id="orari">
+    <div class="stars"></div>
+    <div class="wrap" style="position:relative; z-index:2; max-width:720px; text-align:center">
+      <p class="eyebrow" data-i18n="visit_eyebrow">— VIENI A TROVARCI</p>
+      <h2 class="heading-lg" style="margin-top:8px" data-i18n="visit_heading">Largo Roma 1, Pienza</h2>
+      <p class="body-text" style="margin-top:16px" data-i18n="visit_hours_note">Orari indicativi — vi aspettiamo dalla colazione fino a sera.</p>
+      <ul class="hours-list" style="margin-top:36px; text-align:left">
+        <li>
+          <span class="hours-label" style="color:var(--cream)" data-i18n="visit_hours_1_label">Colazione & Caffè</span>
+          <span class="hours-time" style="color:var(--gold-light)">07:30 – 11:30</span>
+        </li>
+        <li style="border-color:rgba(250,245,234,0.15)">
+          <span class="hours-label" style="color:var(--cream)" data-i18n="visit_hours_2_label">Cucina</span>
+          <span class="hours-time" style="color:var(--gold-light)">12:00 – 15:00</span>
+        </li>
+        <li style="border-color:rgba(250,245,234,0.15)">
+          <span class="hours-label" style="color:var(--cream)" data-i18n="visit_hours_3_label">Aperitivo</span>
+          <span class="hours-time" style="color:var(--gold-light)">15:00 – 21:00</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d11.6805384!3d43.0770768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132967c07e789677%3A0x838bf99be51ab15b!2sLe%20Cinque%20Lune!5e0!3m2!1sit!2sit!4v1"
+    width="100%" height="400" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Le Cinque Lune — Largo Roma 1, Pienza"></iframe>
+
+  <!-- ===== GALLERY PIENZA ===== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="text-center" style="max-width:600px; margin:0 auto 0;">
+        <p class="eyebrow" data-i18n="gallery_eyebrow">— PIENZA</p>
+        <h2 class="heading-lg" data-i18n="gallery_heading">Un angolo di Val d'Orcia</h2>
+        <p class="body-text" style="margin-top:16px" data-i18n="gallery_body">Vicoli di pietra, campanili silenziosi e colline che si perdono all'orizzonte: Pienza è la cornice quotidiana della nostra tavola.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="hover-zoom tall">
+          <img src="immagini/federico-di-dio-photography-imDFBYDnqI0-unsplash.jpg" alt="Vicolo fiorito di Pienza">
+          <span class="photo-credit">Federico Di Dio / Unsplash</span>
+        </div>
+        <div class="hover-zoom">
+          <img src="immagini/roan-lavery-v-1XzaPhQu8-unsplash.jpg" alt="Portale della chiesa in pietra">
+          <span class="photo-credit">Roan Lavery / Unsplash</span>
+        </div>
+        <div class="hover-zoom">
+          <img src="immagini/claudio-mota-jFYHpwBHPwE-unsplash.jpg" alt="Vicolo con vista campagna">
+          <span class="photo-credit">Claudio Mota / Unsplash</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer grain">
+    <div class="stars"></div>
+    <div class="wrap" style="position:relative; z-index:2">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand" style="margin-bottom:16px">
+            <img src="logo/logo_orizzontale_v2.svg" alt="Le Cinque Lune" class="footer-logo">
+          </a>
+          <p style="color:rgba(250,245,234,0.6); font-size:14px; margin-top:12px" data-i18n="footer_tagline">Pasticceria · Caffè · Taverna</p>
+        </div>
+        <div>
+          <p class="footer-label" data-i18n="footer_address_label">INDIRIZZO</p>
+          <p class="footer-link">Largo Roma 1<br>53026 Pienza (SI)<br>Toscana, Italia</p>
+        </div>
+        <div>
+          <p class="footer-label" data-i18n="footer_explore_label">ESPLORA</p>
+          <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
+          <a href="menu.html" class="footer-link" data-i18n="nav_menu">Menu</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="footer-link" style="margin-top:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <small style="color:rgba(250,245,234,0.4); font-size:12px" data-i18n="footer_copyright">© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const UI = {
+    "nav_home":{"it":"Home","en":"Home","ko":"홈","ru":"Главная"},
+    "nav_menu":{"it":"Menu","en":"Menu","ko":"메뉴","ru":"Меню"},
+    "hero_eyebrow":{"it":"PIENZA · TOSCANA","en":"PIENZA · TUSCANY","ko":"피엔차 · 토스카나","ru":"ПЬЕНЦА · ТОСКАНА"},
+    "hero_tagline":{"it":"Pasticceria, Caffè e Taverna nel cuore di Pienza.","en":"Pastry, Coffee and Taverna in the heart of Pienza.","ko":"피엔차 중심부의 페이스트리, 카페 그리고 타베르나.","ru":"Кондитерская, кафе и таверна в самом сердце Пьенцы."},
+    "hero_cta":{"it":"Scopri il Menu","en":"View the Menu","ko":"메뉴 보기","ru":"Смотреть меню"},
+    "story_eyebrow":{"it":"— IL TUO POSTO A PIENZA","en":"— YOUR PLACE IN PIENZA","ko":"— 피엔차에서 당신의 자리","ru":"— ВАШЕ МЕСТО В ПЬЕНЦЕ"},
+    "story_heading":{"it":"Qualunque sia la tua giornata","en":"Whatever your day looks like","ko":"어떤 하루를 보내든","ru":"Каким бы ни был ваш день"},
+    "story_body":{"it":"La classica colazione italiana con caffè e brioche, oppure pancake, french toast e centrifuga per viziarti un po'. Una colazione salata con verdure fresche, omelette, prosciutto e formaggio. Un pranzo tipico toscano con pici fatti a mano e taglieri della Val d'Orcia. O semplicemente un aperitivo con gli amici, tra stuzzichini, spritz e un buon calice di Nobile. A Le Cinque Lune c'è sempre un buon motivo per sedersi.","en":"A classic Italian breakfast with coffee and brioche, or pancakes, french toast and a fresh juice to treat yourself. A savoury breakfast with fresh vegetables, omelette, ham and cheese. A traditional Tuscan lunch with hand-rolled pici and Val d'Orcia charcuterie boards. Or simply an aperitivo with friends — nibbles, spritz and a fine glass of Nobile. At Le Cinque Lune, there's always a good reason to sit down.","ko":"커피와 브리오슈로 즐기는 클래식 이탈리안 아침, 혹은 팬케이크와 프렌치 토스트, 착즙 주스로 자신을 위한 특별한 아침. 신선한 채소와 오믈렛, 햄과 치즈의 든든한 조식. 수제 피치 파스타와 발도르차 타글리에레로 이루어진 정통 토스카나 점심. 또는 친구들과 함께하는 아페리티보 — 스투치키니, 스프리츠, 그리고 노빌레 한 잔. 레 친퀘 루네에는 언제나 앉을 이유가 있습니다.","ru":"Классический итальянский завтрак с кофе и бриошью или панкейки, французские тосты и фреш, чтобы побаловать себя. Солёный завтрак со свежими овощами, омлетом, ветчиной и сыром. Традиционный тосканский обед с пастой пичи ручной работы и тарелками из Валь д'Орча. Или просто аперитив с друзьями — закуски, шприц и бокал Нобиле. В Le Cinque Lune всегда есть повод присесть."},
+    "story_tag_pastry":{"it":"Colazione","en":"Breakfast","ko":"아침 식사","ru":"Завтрак"},
+    "story_tag_cafe":{"it":"Pranzo","en":"Lunch","ko":"점심","ru":"Обед"},
+    "story_tag_brunch":{"it":"Brunch","en":"Brunch","ko":"브런치","ru":"Бранч"},
+    "story_tag_taverna":{"it":"Aperitivo","en":"Aperitivo","ko":"아페리티보","ru":"Аперитив"},
+    "story_tag_cocktail":{"it":"Cocktail","en":"Cocktails","ko":"칵테일","ru":"Коктейли"},
+    "family_eyebrow":{"it":"— NUOVA APERTURA · LUGLIO 2026","en":"— NEWLY OPENED · JULY 2026","ko":"— 2026년 7월 신규 오픈","ru":"— НОВОЕ ОТКРЫТИЕ · ИЮЛЬ 2026"},
+    "family_body":{"it":"Le Cinque Lune è un sogno di famiglia diventato realtà. Mauro e Marianna hanno aperto le porte di questo locale nel cuore di Pienza a luglio 2026. Insieme al piccolo Alex, vi accolgono ogni giorno con la passione di chi crede che ogni piatto e ogni caffè meritino cura e autenticità.","en":"Le Cinque Lune is a family dream come true. Mauro and Marianna opened the doors of this place in the heart of Pienza in July 2026. Together with little Alex, they welcome you every day with the passion of those who believe every dish and every coffee deserves care and authenticity.","ko":"레 친퀘 루네는 가족의 꿈이 현실이 된 곳입니다. 마우로와 마리안나가 2026년 7월 피엔차 중심부에 이 가게의 문을 열었습니다. 어린 알렉스와 함께, 모든 요리와 커피에 정성과 진정성을 담아 매일 여러분을 맞이합니다.","ru":"Le Cinque Lune — это семейная мечта, ставшая реальностью. Мауро и Марианна открыли двери этого заведения в самом сердце Пьенцы в июле 2026 года. Вместе с маленьким Алексом они встречают вас каждый день с любовью тех, кто верит, что каждое блюдо и каждый кофе заслуживают заботы и подлинности."},
+    "food_section_1":{"it":"Dalla colazione al pranzo","en":"From breakfast to lunch","ko":"아침부터 점심까지","ru":"От завтрака до обеда"},
+    "food_section_2":{"it":"Le nostre coppe gelato artigianali","en":"Our artisan gelato sundaes","ko":"수제 젤라토 선데이","ru":"Наши авторские десерты и мороженое"},
+    "gallery_eyebrow":{"it":"— PIENZA","en":"— PIENZA","ko":"— 피엔차","ru":"— ПЬЕНЦА"},
+    "gallery_heading":{"it":"Un angolo di Val d'Orcia","en":"A corner of Val d'Orcia","ko":"발도르차의 한 모퉁이","ru":"Уголок Валь д'Орча"},
+    "gallery_body":{"it":"Vicoli di pietra, campanili silenziosi e colline che si perdono all'orizzonte: Pienza è la cornice quotidiana della nostra tavola.","en":"Stone alleyways, quiet bell towers and hills fading into the horizon: Pienza is the everyday backdrop to our table.","ko":"돌로 이루어진 골목길, 고요한 종탑, 그리고 지평선 너머로 이어지는 언덕들. 피엔차는 우리 식탁의 일상적인 배경입니다.","ru":"Каменные переулки, тихие колокольни и холмы, уходящие за горизонт: Пьенца — это ежедневная декорация нашего стола."},
+    "menu_teaser_eyebrow":{"it":"— GOLA","en":"— TASTE","ko":"— 맛","ru":"— ВКУС"},
+    "menu_teaser_heading":{"it":"Dalla brioche al tramonto","en":"From morning brioche to sunset","ko":"아침 브리오슈부터 일몰까지","ru":"От утренней бриоши до заката"},
+    "menu_teaser_body":{"it":"Colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, e una cantina che non si prende troppo sul serio. Il menu completo, in quattro lingue.","en":"Sweet and savoury breakfasts, properly hand-rolled pici, boards from the Val d'Orcia, and a cellar that doesn't take itself too seriously. The full menu, in four languages.","ko":"달콤하고 짭짤한 아침 식사, 제대로 손으로 만든 피치 파스타, 발도르차의 플래터, 그리고 너무 진지하지 않은 와인 셀렉션까지. 전체 메뉴를 4개 언어로 만나보세요.","ru":"Сладкие и солёные завтраки, паста пичи ручной работы, тосканские тарелки и винный погреб без лишней серьёзности. Полное меню на четырёх языках."},
+    "menu_teaser_cta":{"it":"Vedi tutto il menu →","en":"See the full menu →","ko":"전체 메뉴 보기 →","ru":"Смотреть меню полностью →"},
+    "visit_eyebrow":{"it":"— VIENI A TROVARCI","en":"— COME VISIT US","ko":"— 방문해 주세요","ru":"— ПРИХОДИТЕ К НАМ"},
+    "visit_heading":{"it":"Largo Roma 1, Pienza","en":"Largo Roma 1, Pienza","ko":"Largo Roma 1, 피엔차","ru":"Ларго Рома 1, Пьенца"},
+    "visit_hours_note":{"it":"Orari indicativi — vi aspettiamo dalla colazione fino a sera.","en":"Indicative hours — we welcome you from breakfast until evening.","ko":"안내용 영업시간입니다 — 아침부터 저녁까지 기다리고 있습니다.","ru":"Ориентировочные часы работы — ждём вас с завтрака до вечера."},
+    "visit_hours_1_label":{"it":"Colazione & Caffè","en":"Breakfast & Coffee","ko":"아침 식사 & 커피","ru":"Завтрак и кофе"},
+    "visit_hours_2_label":{"it":"Cucina","en":"Kitchen","ko":"주방","ru":"Кухня"},
+    "visit_hours_3_label":{"it":"Aperitivo","en":"Aperitivo","ko":"아페리티보","ru":"Аперитив"},
+    "footer_tagline":{"it":"Pasticceria · Caffè · Taverna","en":"Pastry · Coffee · Taverna","ko":"페이스트리 · 카페 · 타베르나","ru":"Кондитерская · Кафе · Таверна"},
+    "footer_address_label":{"it":"INDIRIZZO","en":"ADDRESS","ko":"주소","ru":"АДРЕС"},
+    "footer_explore_label":{"it":"ESPLORA","en":"EXPLORE","ko":"탐색","ru":"РАЗДЕЛЫ"},
+    "footer_copyright":{"it":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","en":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ko":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ru":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"}
+  };
+
+  const LANG_LABELS = {it:'IT', en:'EN', ko:'KO', ru:'RU'};
+  let currentLang = localStorage.getItem('cl_lang') || 'it';
+
+  function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('cl_lang', lang);
+    document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'it';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (UI[key] && UI[key][lang]) el.textContent = UI[key][lang];
+    });
+    document.getElementById('langBtn').firstChild.textContent = LANG_LABELS[lang] + ' ';
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  document.getElementById('langBtn').addEventListener('click', () => {
+    const menu = document.getElementById('langMenu');
+    const btn = document.getElementById('langBtn');
+    const open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  });
+
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setLang(btn.dataset.lang);
+      document.getElementById('langMenu').classList.remove('open');
+      document.getElementById('langBtn').classList.remove('open');
+      document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-switch')) {
+      document.getElementById('langMenu').classList.remove('open');
+      document.getElementById('langBtn').classList.remove('open');
+      document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('mobileNav').classList.toggle('open');
+  });
+
+  if (currentLang !== 'it') setLang(currentLang);
+  </script>
+
+</body>
+</html>

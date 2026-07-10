@@ -1,0 +1,194 @@
+{
+  "nav_home": {
+    "it": "Home",
+    "en": "Home",
+    "ko": "홈",
+    "ru": "Главная"
+  },
+  "nav_menu": {
+    "it": "Menu",
+    "en": "Menu",
+    "ko": "메뉴",
+    "ru": "Меню"
+  },
+  "hero_eyebrow": {
+    "it": "PIENZA · TOSCANA",
+    "en": "PIENZA · TUSCANY",
+    "ko": "피엔차 · 토스카나",
+    "ru": "ПЬЕНЦА · ТОСКАНА"
+  },
+  "hero_tagline": {
+    "it": "Pasticceria, Caffè e Taverna nel cuore di Pienza.",
+    "en": "Pastry, Coffee and Taverna in the heart of Pienza.",
+    "ko": "피엔차 중심부의 페이스트리, 카페 그리고 타베르나.",
+    "ru": "Кондитерская, кафе и таверна в самом сердце Пьенцы."
+  },
+  "hero_cta": {
+    "it": "Scopri il Menu",
+    "en": "View the Menu",
+    "ko": "메뉴 보기",
+    "ru": "Смотреть меню"
+  },
+  "story_eyebrow": {
+    "it": "— LA NOSTRA STORIA",
+    "en": "— OUR STORY",
+    "ko": "— 우리의 이야기",
+    "ru": "— НАША ИСТОРИЯ"
+  },
+  "story_heading": {
+    "it": "Sotto le stesse cinque lune",
+    "en": "Under the same five moons",
+    "ko": "같은 다섯 개의 달 아래",
+    "ru": "Под теми же пятью лунами"
+  },
+  "story_body": {
+    "it": "Nel cuore di Pienza, tra le pietre dorate di Largo Roma, Le Cinque Lune è pasticceria al mattino, caffè durante il giorno e taverna al calare della sera. Un unico indirizzo per accompagnare ogni ora della giornata, con ricette che raccontano la Val d'Orcia.",
+    "en": "In the heart of Pienza, among the golden stones of Largo Roma, Le Cinque Lune is a pastry shop by morning, a café by day, and a taverna as evening falls. One address for every hour of the day, with recipes that speak of the Val d'Orcia.",
+    "ko": "피엔차 중심부, 라르고 로마의 황금빛 돌담 사이에서 레 친퀘 루네는 아침엔 페이스트리 가게로, 낮엔 카페로, 저녁이 되면 타베르나로 변합니다. 발도르차의 이야기를 담은 레시피와 함께 하루 종일 당신 곁에 있는 한 곳입니다.",
+    "ru": "В самом сердце Пьенцы, среди золотистых камней Ларго Рома, Le Cinque Lune — это кондитерская по утрам, кафе днём и таверна с наступлением вечера. Одно место на весь день, с рецептами, хранящими вкус Валь д'Орча."
+  },
+  "story_tag_pastry": {
+    "it": "Pasticceria",
+    "en": "Pastry",
+    "ko": "페이스트리",
+    "ru": "Кондитерская"
+  },
+  "story_tag_cafe": {
+    "it": "Caffè",
+    "en": "Coffee",
+    "ko": "카페",
+    "ru": "Кафе"
+  },
+  "story_tag_taverna": {
+    "it": "Taverna",
+    "en": "Taverna",
+    "ko": "타베르나",
+    "ru": "Таверна"
+  },
+  "gallery_eyebrow": {
+    "it": "— DOVE SIAMO",
+    "en": "— WHERE WE ARE",
+    "ko": "— 우리의 위치",
+    "ru": "— ГДЕ МЫ НАХОДИМСЯ"
+  },
+  "gallery_heading": {
+    "it": "Un angolo di Val d'Orcia",
+    "en": "A corner of Val d'Orcia",
+    "ko": "발도르차의 한 모퉁이",
+    "ru": "Уголок Валь д'Орча"
+  },
+  "gallery_body": {
+    "it": "Vicoli di pietra, campanili silenziosi e colline che si perdono all'orizzonte: Pienza è la cornice quotidiana della nostra tavola.",
+    "en": "Stone alleyways, quiet bell towers and hills fading into the horizon: Pienza is the everyday backdrop to our table.",
+    "ko": "돌로 이루어진 골목길, 고요한 종탑, 그리고 지평선 너머로 이어지는 언덕들. 피엔차는 우리 식탁의 일상적인 배경입니다.",
+    "ru": "Каменные переулки, тихие колокольни и холмы, уходящие за горизонт: Пьенца — это ежедневная декорация нашего стола."
+  },
+  "menu_teaser_eyebrow": {
+    "it": "— GOLA",
+    "en": "— TASTE",
+    "ko": "— 맛",
+    "ru": "— ВКУС"
+  },
+  "menu_teaser_heading": {
+    "it": "Dalla brioche alla mezzanotte",
+    "en": "From morning brioche to midnight",
+    "ko": "아침 브리오슈부터 자정까지",
+    "ru": "От утренней бриоши до полуночи"
+  },
+  "menu_teaser_body": {
+    "it": "Colazioni dolci e salate, pici fatti come si deve, taglieri della Val d'Orcia, e una cantina che non si prende troppo sul serio. Il menu completo, in quattro lingue.",
+    "en": "Sweet and savoury breakfasts, properly hand-rolled pici, boards from the Val d'Orcia, and a cellar that doesn't take itself too seriously. The full menu, in four languages.",
+    "ko": "달콤하고 짭짤한 아침 식사, 제대로 손으로 만든 피치 파스타, 발도르차의 플래터, 그리고 너무 진지하지 않은 와인 셀렉션까지. 전체 메뉴를 4개 언어로 만나보세요.",
+    "ru": "Сладкие и солёные завтраки, паста пичи ручной работы, тосканские тарелки и винный погреб без лишней серьёзности. Полное меню на четырёх языках."
+  },
+  "menu_teaser_cta": {
+    "it": "Vedi tutto il menu →",
+    "en": "See the full menu →",
+    "ko": "전체 메뉴 보기 →",
+    "ru": "Смотреть меню полностью →"
+  },
+  "visit_eyebrow": {
+    "it": "— VIENI A TROVARCI",
+    "en": "— COME VISIT US",
+    "ko": "— 방문해 주세요",
+    "ru": "— ПРИХОДИТЕ К НАМ"
+  },
+  "visit_heading": {
+    "it": "Largo Roma 1, Pienza",
+    "en": "Largo Roma 1, Pienza",
+    "ko": "Largo Roma 1, 피엔차",
+    "ru": "Ларго Рома 1, Пьенца"
+  },
+  "visit_hours_note": {
+    "it": "Orari indicativi — vi aspettiamo dalla colazione fino a tarda sera.",
+    "en": "Indicative hours — we welcome you from breakfast until late evening.",
+    "ko": "안내용 영업시간입니다 — 아침부터 늦은 저녁까지 기다리고 있습니다.",
+    "ru": "Ориентировочные часы работы — ждём вас с завтрака до позднего вечера."
+  },
+  "visit_hours_1_label": {
+    "it": "Colazione & Caffè",
+    "en": "Breakfast & Coffee",
+    "ko": "아침 식사 & 커피",
+    "ru": "Завтрак и кофе"
+  },
+  "visit_hours_2_label": {
+    "it": "Cucina",
+    "en": "Kitchen",
+    "ko": "주방",
+    "ru": "Кухня"
+  },
+  "visit_hours_3_label": {
+    "it": "Aperitivo & Taverna",
+    "en": "Aperitivo & Taverna",
+    "ko": "아페리티보 & 타베르나",
+    "ru": "Аперитив и таверна"
+  },
+  "footer_tagline": {
+    "it": "Pasticceria · Caffè · Taverna",
+    "en": "Pastry · Coffee · Taverna",
+    "ko": "페이스트리 · 카페 · 타베르나",
+    "ru": "Кондитерская · Кафе · Таверна"
+  },
+  "footer_address_label": {
+    "it": "INDIRIZZO",
+    "en": "ADDRESS",
+    "ko": "주소",
+    "ru": "АДРЕС"
+  },
+  "footer_explore_label": {
+    "it": "ESPLORA",
+    "en": "EXPLORE",
+    "ko": "탐색",
+    "ru": "РАЗДЕЛЫ"
+  },
+  "footer_copyright": {
+    "it": "© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)",
+    "en": "© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)",
+    "ko": "© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)",
+    "ru": "© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"
+  },
+  "menu_page_eyebrow": {
+    "it": "PASTICCERIA · CAFFÈ · TAVERNA",
+    "en": "PASTRY · COFFEE · TAVERNA",
+    "ko": "페이스트리 · 카페 · 타베르나",
+    "ru": "КОНДИТЕРСКАЯ · КАФЕ · ТАВЕРНА"
+  },
+  "menu_page_title": {
+    "it": "Il Nostro Menu",
+    "en": "Our Menu",
+    "ko": "저희 메뉴",
+    "ru": "Наше меню"
+  },
+  "menu_page_subtitle": {
+    "it": "Ricette semplici, ingredienti della Val d'Orcia e qualche debolezza dolce. Ecco cosa serviamo, dal mattino a notte fonda.",
+    "en": "Simple recipes, ingredients from the Val d'Orcia, and a few sweet weaknesses. Here's what we serve, from morning to late night.",
+    "ko": "간단한 레시피, 발도르차의 신선한 재료, 그리고 약간의 달콤한 유혹까지. 아침부터 늦은 밤까지 저희가 준비한 메뉴입니다.",
+    "ru": "Простые рецепты, ингредиенты из Валь д'Орча и немного сладких слабостей. Вот что мы предлагаем — с утра до поздней ночи."
+  },
+  "menu_back_home": {
+    "it": "← Torna alla Home",
+    "en": "← Back to Home",
+    "ko": "← 홈으로 돌아가기",
+    "ru": "← Назад на главную"
+  }
+}
