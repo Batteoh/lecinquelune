@@ -83,6 +83,27 @@
     .mobile-nav.open { display: block; }
     .mobile-nav a { display: block; padding: 12px 0; font-size: 14px; letter-spacing: 0.12em; font-weight: 600; text-transform: uppercase; color: var(--ink-soft); }
     @media (min-width: 860px) { .mobile-nav { display: none !important; } }
+    .locale-carousel {
+      overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+      display: flex; gap: 16px; padding: 0 24px;
+      scrollbar-width: none;
+    }
+    .locale-carousel::-webkit-scrollbar { display: none; }
+    .locale-carousel img {
+      scroll-snap-align: center; flex-shrink: 0;
+      width: 80vw; max-width: 480px;
+      object-fit: contain; border-radius: 4px;
+    }
+    @media (min-width: 768px) {
+      .locale-carousel { gap: 20px; padding: 0 56px; }
+      .locale-carousel img { width: 45vw; max-width: 560px; }
+    }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0;
+      background: var(--stone); cursor: pointer; transition: all 0.3s;
+    }
+    .carousel-dot.active { background: var(--gold); transform: scale(1.2); }
     .food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 48px; }
     @media (min-width: 768px) { .food-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
     @media (min-width: 1024px) { .food-grid { grid-template-columns: repeat(5, 1fr); } }
@@ -230,6 +251,27 @@
     </div>
   </section>
 
+  <!-- ===== LOCALE CAROUSEL ===== -->
+  <section class="section" style="padding-bottom:64px">
+    <div class="text-center wrap" style="margin-bottom:48px">
+      <p class="eyebrow" data-i18n="carousel_eyebrow">— IL NOSTRO LOCALE</p>
+    </div>
+    <div class="locale-carousel" id="localeCarousel">
+      <img src="immagini/coppa-gelato-tavolino.jpg" alt="Coppa gelato con frutta e panna davanti all'insegna Le Cinque Lune">
+      <img src="immagini/sala-taverna-pienza.jpg" alt="Sala taverna con arco in pietra e quadro Val d'Orcia">
+      <img src="immagini/sala-taverna-botte.jpg" alt="Sala taverna con tavolo botte e quadro toscano">
+      <img src="immagini/bancone-vini-interno.jpg" alt="Bancone vini con sgabelli alti e mensola bottiglie">
+      <img src="immagini/cappuccino-tavolino-esterno.jpg" alt="Cappuccino al tavolino esterno a Pienza">
+    </div>
+    <div class="carousel-dots" id="carouselDots">
+      <button class="carousel-dot active" aria-label="Foto 1"></button>
+      <button class="carousel-dot" aria-label="Foto 2"></button>
+      <button class="carousel-dot" aria-label="Foto 3"></button>
+      <button class="carousel-dot" aria-label="Foto 4"></button>
+      <button class="carousel-dot" aria-label="Foto 5"></button>
+    </div>
+  </section>
+
   <!-- ===== MOON DIVIDER ===== -->
   <div style="padding:24px 0; text-align:center;">
     <div class="moon-divider gold">
@@ -374,6 +416,7 @@
     "hero_panel_3":{"it":"Pranzo","en":"Lunch","ko":"점심","ru":"Обед"},
     "hero_panel_4":{"it":"Caffè","en":"Coffee","ko":"커피","ru":"Кофе"},
     "hero_panel_5":{"it":"Aperitivo","en":"Aperitivo","ko":"아페리티보","ru":"Аперитив"},
+    "carousel_eyebrow":{"it":"— IL NOSTRO LOCALE","en":"— OUR SPACE","ko":"— 우리 공간","ru":"— НАШЕ ПРОСТРАНСТВО"},
     "story_eyebrow":{"it":"— PIENZA, DALLA COLAZIONE ALL'APERITIVO","en":"— PIENZA, FROM BREAKFAST TO APERITIVO","ko":"— 피엔차, 아침부터 아페리티보까지","ru":"— ПЬЕНЦА, ОТ ЗАВТРАКА ДО АПЕРИТИВА"},
     "story_heading":{"it":"Sei nel posto giusto","en":"You're in the right place","ko":"바로 여기가 그곳입니다","ru":"Вы в правильном месте"},
     "story_body":{"it":"Brioche e cappuccino, pancake e centrifughe fresche. Pici tirati a mano, taglieri con pecorino di Pienza e salumi toscani. Spritz, Nobile di Montepulciano e stuzzichini al tramonto. A Le Cinque Lune ogni momento della giornata diventa il migliore — e ogni scusa è buona per restare.","en":"Brioche and cappuccino, pancakes and fresh juices. Hand-rolled pici, boards with Pienza pecorino and Tuscan charcuterie. Spritz, Nobile di Montepulciano and nibbles at sunset. At Le Cinque Lune every moment of the day becomes the best one — and every excuse is a good one to stay.","ko":"브리오슈와 카푸치노, 팬케이크와 신선한 착즙 주스. 수제 피치 파스타, 피엔차 페코리노와 토스카나 살루미 타글리에레. 일몰의 스프리츠, 노빌레 디 몬테풀치아노와 스투치키니. 레 친퀘 루네에서는 하루의 모든 순간이 최고가 됩니다 — 머물 핑계는 언제나 넘칩니다.","ru":"Бриошь и капучино, панкейки и свежие соки. Паста пичи ручной работы, тарелки с пекорино из Пьенцы и тосканскими салуми. Шприц, Нобиле ди Монтепульчано и закуски на закате. В Le Cinque Lune каждый момент дня становится лучшим — и всегда найдётся повод остаться."},
@@ -452,6 +495,35 @@
   });
 
   if (currentLang !== 'it') setLang(currentLang);
+
+  // Locale carousel dots
+  (() => {
+    const carousel = document.getElementById('localeCarousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+    if (!carousel || !dots.length) return;
+    const imgs = carousel.querySelectorAll('img');
+
+    const updateDots = () => {
+      let closest = 0, minDist = Infinity;
+      const center = carousel.scrollLeft + carousel.offsetWidth / 2;
+      imgs.forEach((img, i) => {
+        const dist = Math.abs(img.offsetLeft + img.offsetWidth / 2 - center);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+    };
+
+    carousel.addEventListener('scroll', updateDots, { passive: true });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        carousel.style.scrollSnapType = 'none';
+        carousel.scrollLeft = imgs[i].offsetLeft - (carousel.offsetWidth - imgs[i].offsetWidth) / 2;
+        updateDots();
+        requestAnimationFrame(() => { carousel.style.scrollSnapType = ''; });
+      });
+    });
+  })();
   </script>
 
 </body>
