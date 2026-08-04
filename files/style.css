@@ -228,6 +228,8 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 900px) { .menu-items-grid { grid-template-columns: 1fr 1fr; column-gap: 56px; } }
 
 .menu-item-row { padding: 16px 0; border-bottom: 1px dotted rgba(28,41,66,0.18); }
+.menu-items-grid .menu-item-row:last-child { border-bottom: none; }
+.menu-items-grid .menu-item-row:has(+ .menu-subsection-heading) { border-bottom: none; }
 .menu-item-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .menu-item-name { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 500; color: var(--ink); }
 .menu-item-price { font-family: 'Fraunces', serif; font-style: italic; font-size: 16px; color: var(--gold-deep); white-space: nowrap; flex-shrink: 0; }
