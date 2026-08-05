@@ -91,12 +91,15 @@
     .locale-carousel::-webkit-scrollbar { display: none; }
     .locale-carousel img {
       scroll-snap-align: center; flex-shrink: 0;
-      width: 80vw; max-width: 480px;
-      object-fit: contain; border-radius: 4px;
+      width: 78vw; max-width: 420px;
+      aspect-ratio: 4/5;
+      object-fit: contain;
+      background: var(--cream);
+      border-radius: 4px;
     }
     @media (min-width: 768px) {
       .locale-carousel { gap: 20px; padding: 0 56px; }
-      .locale-carousel img { width: 45vw; max-width: 560px; }
+      .locale-carousel img { width: 36vw; max-width: 420px; }
     }
     .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
     .carousel-dot {
@@ -253,14 +256,18 @@
   <!-- ===== LOCALE CAROUSEL ===== -->
   <section class="section" style="padding-bottom:64px">
     <div class="text-center wrap" style="margin-bottom:48px">
-      <p class="eyebrow" data-i18n="carousel_eyebrow">— IL NOSTRO LOCALE</p>
+      <p class="eyebrow" data-i18n="carousel_eyebrow">— LE CINQUE LUNE</p>
+      <h2 class="heading-lg" style="margin-top:12px" data-i18n="carousel_heading">Atmosfera & sapori</h2>
     </div>
     <div class="locale-carousel" id="localeCarousel">
-      <img src="immagini/coppa-gelato-tavolino.jpg" alt="Coppa gelato con frutta e panna davanti all'insegna Le Cinque Lune">
-      <img src="immagini/sala-taverna-pienza.jpg" alt="Sala taverna con arco in pietra e quadro Val d'Orcia">
-      <img src="immagini/sala-taverna-botte.jpg" alt="Sala taverna con tavolo botte e quadro toscano">
-      <img src="immagini/bancone-vini-interno.jpg" alt="Bancone vini con sgabelli alti e mensola bottiglie">
-      <img src="immagini/cappuccino-tavolino-esterno.jpg" alt="Cappuccino al tavolino esterno a Pienza">
+      <img src="cropped%20img/esterni-2.jpg" alt="Esterno del bistrot Le Cinque Lune a Pienza">
+      <img src="cropped%20img/pancake-tavolino.jpg" alt="Pancake al tavolino">
+      <img src="cropped%20img/colazione-dettaglio.jpg" alt="Dettaglio colazione">
+      <img src="cropped%20img/coppa-gelato-tavolino.jpg" alt="Coppa gelato con frutta e panna">
+      <img src="cropped%20img/interni%20dettaglio-2.jpg" alt="Dettaglio interni Le Cinque Lune">
+      <img src="cropped%20img/bancone-vini-interno.jpg" alt="Bancone vini con sgabelli alti e mensola bottiglie">
+      <img src="cropped%20img/cappuccino-tavolino-esterno.jpg" alt="Cappuccino al tavolino esterno a Pienza">
+      <img src="cropped%20img/sala-taverna-botte.jpg" alt="Sala taverna con tavolo botte e quadro toscano">
     </div>
     <div class="carousel-dots" id="carouselDots">
       <button class="carousel-dot active" aria-label="Foto 1"></button>
@@ -268,6 +275,9 @@
       <button class="carousel-dot" aria-label="Foto 3"></button>
       <button class="carousel-dot" aria-label="Foto 4"></button>
       <button class="carousel-dot" aria-label="Foto 5"></button>
+      <button class="carousel-dot" aria-label="Foto 6"></button>
+      <button class="carousel-dot" aria-label="Foto 7"></button>
+      <button class="carousel-dot" aria-label="Foto 8"></button>
     </div>
   </section>
 
@@ -417,7 +427,8 @@
     "hero_panel_3":{"it":"Pranzo","en":"Lunch","ko":"점심","ru":"Обед"},
     "hero_panel_4":{"it":"Caffè","en":"Coffee","ko":"커피","ru":"Кофе"},
     "hero_panel_5":{"it":"Aperitivo","en":"Aperitivo","ko":"아페리티보","ru":"Аперитив"},
-    "carousel_eyebrow":{"it":"— IL NOSTRO LOCALE","en":"— OUR SPACE","ko":"— 우리 공간","ru":"— НАШЕ ПРОСТРАНСТВО"},
+    "carousel_eyebrow":{"it":"— LE CINQUE LUNE","en":"— LE CINQUE LUNE","ko":"— LE CINQUE LUNE","ru":"— LE CINQUE LUNE"},
+    "carousel_heading":{"it":"Atmosfera & sapori","en":"Atmosphere & flavours","ko":"분위기 & 맛","ru":"Атмосфера & вкусы"},
     "story_eyebrow":{"it":"— PIENZA, DALLA COLAZIONE ALL'APERITIVO","en":"— PIENZA, FROM BREAKFAST TO APERITIVO","ko":"— 피엔차, 아침부터 아페리티보까지","ru":"— ПЬЕНЦА, ОТ ЗАВТРАКА ДО АПЕРИТИВА"},
     "story_heading":{"it":"Sei nel posto giusto","en":"You're in the right place","ko":"바로 여기가 그곳입니다","ru":"Вы в правильном месте"},
     "story_body":{"it":"Brioche e cappuccino, pancake e centrifughe fresche. Pici tirati a mano, taglieri con pecorino di Pienza e salumi toscani. Spritz, Nobile di Montepulciano e stuzzichini al tramonto. A Le Cinque Lune ogni momento della giornata diventa il migliore — e ogni scusa è buona per restare.","en":"Brioche and cappuccino, pancakes and fresh juices. Hand-rolled pici, boards with Pienza pecorino and Tuscan charcuterie. Spritz, Nobile di Montepulciano and nibbles at sunset. At Le Cinque Lune every moment of the day becomes the best one — and every excuse is a good one to stay.","ko":"브리오슈와 카푸치노, 팬케이크와 신선한 착즙 주스. 수제 피치 파스타, 피엔차 페코리노와 토스카나 살루미 타글리에레. 일몰의 스프리츠, 노빌레 디 몬테풀치아노와 스투치키니. 레 친퀘 루네에서는 하루의 모든 순간이 최고가 됩니다 — 머물 핑계는 언제나 넘칩니다.","ru":"Бриошь и капучино, панкейки и свежие соки. Паста пичи ручной работы, тарелки с пекорино из Пьенцы и тосканскими салуми. Шприц, Нобиле ди Монтепульчано и закуски на закате. В Le Cinque Lune каждый момент дня становится лучшим — и всегда найдётся повод остаться."},
