@@ -712,6 +712,7 @@
           <p class="footer-label" data-i18n="footer_explore_label">ESPLORA</p>
           <a href="index.html" class="footer-link" data-i18n="nav_home">Home</a>
           <a href="menu.html" class="footer-link" data-i18n="nav_menu">Menu</a>
+          <a href="about-en.html" id="about-en-link" class="footer-link" style="display:none">Visitor Guide</a>
           <a href="https://instagram.com/" target="_blank" rel="noopener" class="footer-link" style="margin-top:8px">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>Instagram
           </a>
@@ -1062,6 +1063,8 @@
     if (UI.meta_description && UI.meta_description[lang]) {
       document.querySelector('meta[name="description"]').setAttribute('content', UI.meta_description[lang]);
     }
+    const aboutLink = document.getElementById('about-en-link');
+    if (aboutLink) aboutLink.style.display = lang === 'en' ? 'block' : 'none';
     document.getElementById('langBtn').firstChild.textContent = LANG_LABELS[lang] + ' ';
     document.querySelectorAll('.lang-option').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
