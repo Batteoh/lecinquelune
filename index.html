@@ -9,6 +9,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="files/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Le Cinque Lune",
+    "description": "Pastry, caffè e taverna nel cuore di Pienza, Toscana. Colazioni, brunch, pici fatti a mano, taglieri della Val d'Orcia, dolci fatti in casa e gelato artigianale.",
+    "url": "https://lecinquelune.it",
+    "telephone": "+393924660908",
+    "email": "lecinquelunepastrycaffè@gmail.com",
+    "image": "https://lecinquelune.it/immagini/esterni.jpeg",
+    "servesCuisine": ["Italiana", "Toscana", "Pastry"],
+    "priceRange": "€–€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Largo Roma 1",
+      "addressLocality": "Pienza",
+      "addressRegion": "SI",
+      "postalCode": "53026",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.0770768,
+      "longitude": 11.6805384
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday","Saturday","Sunday"],
+        "opens": "07:30",
+        "closes": "21:00"
+      }
+    ],
+    "hasMenu": "https://lecinquelune.it/menu.html",
+    "sameAs": [
+      "https://www.google.com/maps/place/Le+Cinque+Lune"
+    ]
+  }
+  </script>
   <style>
     .story-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
     @media (min-width: 900px) { .story-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
@@ -497,7 +536,8 @@
     "footer_tagline":{"it":"Pastry · Caffè · Taverna","en":"Pastry · Caffè · Taverna","ko":"페이스트리 · 카페 · 타베르나","ru":"Pastry · Кафе · Таверна"},
     "footer_address_label":{"it":"INDIRIZZO","en":"ADDRESS","ko":"주소","ru":"АДРЕС"},
     "footer_explore_label":{"it":"ESPLORA","en":"EXPLORE","ko":"탐색","ru":"РАЗДЕЛЫ"},
-    "footer_copyright":{"it":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","en":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ko":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ru":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"}
+    "footer_copyright":{"it":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","en":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ko":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ru":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"},
+    "meta_description":{"it":"Pastry, caffè e taverna nel cuore di Pienza, Toscana. Colazioni, pici fatti a mano, taglieri della Val d'Orcia.","en":"Pastry, café and taverna in the heart of Pienza, Tuscany. Breakfasts, hand-rolled pici and Val d'Orcia boards.","ko":"이탈리아 피엔차 중심부의 파티세리, 카페, 타베르나. 아침 식사, 수제 피치 파스타, 발도르차 플래터.","ru":"Кондитерская, кафе и таверна в сердце Пьенцы, Тоскана. Завтраки, паста пичи ручной работы, тарелки Валь д'Орча."}
   };
 
   const LANG_LABELS = {it:'IT', en:'EN', ko:'KO', ru:'RU'};
@@ -511,6 +551,9 @@
       const key = el.getAttribute('data-i18n');
       if (UI[key] && UI[key][lang]) el.textContent = UI[key][lang];
     });
+    if (UI.meta_description && UI.meta_description[lang]) {
+      document.querySelector('meta[name="description"]').setAttribute('content', UI.meta_description[lang]);
+    }
     document.getElementById('langBtn').firstChild.textContent = LANG_LABELS[lang] + ' ';
     document.querySelectorAll('.lang-option').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
