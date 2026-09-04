@@ -972,6 +972,9 @@
   ];
 
   const LANG_LABELS = {it:'IT', en:'EN', ko:'KO', ru:'RU', zh:'ZH', es:'ES'};
+  const VALID_LANGS = ['it','en','ko','ru','zh','es'];
+  const _urlLang = new URLSearchParams(location.search).get('lang');
+  if (_urlLang && VALID_LANGS.includes(_urlLang)) localStorage.setItem('cl_lang', _urlLang);
   let currentLang = localStorage.getItem('cl_lang') || 'it';
 
   function renderMenu(lang) {
