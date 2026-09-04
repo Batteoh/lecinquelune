@@ -108,6 +108,8 @@
               <button class="lang-option" data-lang="en" role="menuitem">English <small>EN</small></button>
               <button class="lang-option" data-lang="ko" role="menuitem">한국어 <small>KO</small></button>
               <button class="lang-option" data-lang="ru" role="menuitem">Русский <small>RU</small></button>
+              <button class="lang-option" data-lang="zh" role="menuitem">中文 <small>ZH</small></button>
+              <button class="lang-option" data-lang="es" role="menuitem">Español <small>ES</small></button>
             </div>
           </div>
           <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -729,37 +731,37 @@
 
   <script>
   const UI = {
-    "nav_home":{"it":"Home","en":"Home","ko":"홈","ru":"Главная"},
-    "nav_menu":{"it":"Menu","en":"Menu","ko":"메뉴","ru":"Меню"},
-    "menu_page_eyebrow":{"it":"PASTRY · CAFFÈ · TAVERNA","en":"PASTRY · CAFFÈ · TAVERNA","ko":"페이스트리 · 카페 · 타베르나","ru":"PASTRY · КАФЕ · ТАВЕРНА"},
-    "menu_page_title":{"it":"Il nostro menu","en":"Our Menu","ko":"저희 메뉴","ru":"Наше меню"},
-    "menu_page_subtitle":{"it":"Brunch dolce o salato, pici tirati a mano, ingredienti freschi della Val d'Orcia, dolci fatti in casa e gelato artigianale a Pienza.","en":"Sweet or savoury brunch, hand-rolled pici, fresh ingredients from Val d'Orcia, homemade desserts and artisan gelato in Pienza.","ko":"달콤하거나 짭짤한 브런치, 수제 피치 파스타, 발도르차의 신선한 재료, 직접 만든 디저트와 수제 젤라토를 피엔차에서 만나보세요.","ru":"Сладкий или солёный бранч, паста пичи ручной работы, свежие продукты из Валь д'Орча, домашние десерты и ремесленное джелато в Пьенце."},
-    "menu_back_home":{"it":"← Torna alla Home","en":"← Back to Home","ko":"← 홈으로 돌아가기","ru":"← Назад на главную"},
-    "footer_tagline":{"it":"Pastry · Caffè · Taverna","en":"Pastry · Caffè · Taverna","ko":"페이스트리 · 카페 · 타베르나","ru":"Pastry · Кафе · Таверна"},
-    "footer_address_label":{"it":"INDIRIZZO","en":"ADDRESS","ko":"주소","ru":"АДРЕС"},
-    "footer_explore_label":{"it":"ESPLORA","en":"EXPLORE","ko":"탐색","ru":"РАЗДЕЛЫ"},
-    "footer_copyright":{"it":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","en":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ko":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ru":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"},
-    "allergen_legend_title":{"it":"Elenco allergeni","en":"Allergen list","ko":"알레르기 유발 성분 목록","ru":"Список аллергенов"},
-    "allergen_legend_hint":{"it":"Reg. (UE) 1169/2011","en":"Reg. (EU) 1169/2011","ko":"EU 규정 1169/2011","ru":"Рег. (ЕС) 1169/2011"},
-    "allergen_legend_note":{"it":"Si prega di comunicare al personale eventuali allergie o intolleranze alimentari.","en":"Please inform staff of any food allergies or intolerances.","ko":"식품 알레르기나 불내증이 있으시면 직원에게 알려주세요.","ru":"Пожалуйста, сообщите персоналу о любых пищевых аллергиях или непереносимости."},
-    "meta_description":{"it":"Menu Le Cinque Lune Pienza: brunch dolce e salato, pici fatti a mano, taglieri della Val d'Orcia, dolci fatti in casa e gelato artigianale.","en":"Le Cinque Lune menu in Pienza: sweet and savoury brunch, hand-rolled pici, Val d'Orcia boards, homemade desserts and artisan gelato.","ko":"피엔차 레 친퀘 루네 메뉴: 달콤하고 짭짤한 브런치, 수제 피치 파스타, 발도르차 플래터, 직접 만든 디저트와 수제 젤라토.","ru":"Меню Le Cinque Lune в Пьенце: сладкий и солёный бранч, паста пичи ручной работы, тарелки Валь д'Орча, домашние десерты и ремесленное джелато."}
+    "nav_home":{"it":"Home","en":"Home","ko":"홈","ru":"Главная","zh":"首页","es":"Inicio"},
+    "nav_menu":{"it":"Menu","en":"Menu","ko":"메뉴","ru":"Меню","zh":"菜单","es":"Menú"},
+    "menu_page_eyebrow":{"it":"PASTRY · CAFFÈ · TAVERNA","en":"PASTRY · CAFFÈ · TAVERNA","ko":"페이스트리 · 카페 · 타베르나","ru":"PASTRY · КАФЕ · ТАВЕРНА","zh":"糕点 · 咖啡 · 餐馆","es":"PASTRY · CAFFÈ · TAVERNA"},
+    "menu_page_title":{"it":"Il nostro menu","en":"Our Menu","ko":"저희 메뉴","ru":"Наше меню","zh":"我们的菜单","es":"Nuestro menú"},
+    "menu_page_subtitle":{"it":"Brunch dolce o salato, pici tirati a mano, ingredienti freschi della Val d'Orcia, dolci fatti in casa e gelato artigianale a Pienza.","en":"Sweet or savoury brunch, hand-rolled pici, fresh ingredients from Val d'Orcia, homemade desserts and artisan gelato in Pienza.","ko":"달콤하거나 짭짤한 브런치, 수제 피치 파스타, 발도르차의 신선한 재료, 직접 만든 디저트와 수제 젤라토를 피엔차에서 만나보세요.","ru":"Сладкий или солёный бранч, паста пичи ручной работы, свежие продукты из Валь д'Орча, домашние десерты и ремесленное джелато в Пьенце.","zh":"甜味或咸味早午餐、手工皮奇面、奥尔恰河谷新鲜食材、自制甜点和手工冰淇淋。","es":"Brunch dulce o salado, pici hechos a mano, ingredientes frescos del Val d'Orcia, postres caseros y gelato artesanal en Pienza."},
+    "menu_back_home":{"it":"← Torna alla Home","en":"← Back to Home","ko":"← 홈으로 돌아가기","ru":"← Назад на главную","zh":"← 返回首页","es":"← Volver al inicio"},
+    "footer_tagline":{"it":"Pastry · Caffè · Taverna","en":"Pastry · Caffè · Taverna","ko":"페이스트리 · 카페 · 타베르나","ru":"Pastry · Кафе · Таверна","zh":"糕点 · 咖啡 · 餐馆","es":"Pastry · Caffè · Taverna"},
+    "footer_address_label":{"it":"INDIRIZZO","en":"ADDRESS","ko":"주소","ru":"АДРЕС","zh":"地址","es":"DIRECCIÓN"},
+    "footer_explore_label":{"it":"ESPLORA","en":"EXPLORE","ko":"탐색","ru":"РАЗДЕЛЫ","zh":"探索","es":"EXPLORAR"},
+    "footer_copyright":{"it":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","en":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ko":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","ru":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","zh":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)","es":"© 2026 Le Cinque Lune — Largo Roma 1, Pienza (SI)"},
+    "allergen_legend_title":{"it":"Elenco allergeni","en":"Allergen list","ko":"알레르기 유발 성분 목록","ru":"Список аллергенов","zh":"过敏原列表","es":"Lista de alérgenos"},
+    "allergen_legend_hint":{"it":"Reg. (UE) 1169/2011","en":"Reg. (EU) 1169/2011","ko":"EU 규정 1169/2011","ru":"Рег. (ЕС) 1169/2011","zh":"欧盟法规 1169/2011","es":"Reg. (UE) 1169/2011"},
+    "allergen_legend_note":{"it":"Si prega di comunicare al personale eventuali allergie o intolleranze alimentari.","en":"Please inform staff of any food allergies or intolerances.","ko":"식품 알레르기나 불내증이 있으시면 직원에게 알려주세요.","ru":"Пожалуйста, сообщите персоналу о любых пищевых аллергиях или непереносимости.","zh":"如有食物过敏或不耐受，请告知工作人员。","es":"Por favor, informe al personal de cualquier alergia o intolerancia alimentaria."},
+    "meta_description":{"it":"Menu Le Cinque Lune Pienza: brunch dolce e salato, pici fatti a mano, taglieri della Val d'Orcia, dolci fatti in casa e gelato artigianale.","en":"Le Cinque Lune menu in Pienza: sweet and savoury brunch, hand-rolled pici, Val d'Orcia boards, homemade desserts and artisan gelato.","ko":"피엔차 레 친퀘 루네 메뉴: 달콤하고 짭짤한 브런치, 수제 피치 파스타, 발도르차 플래터, 직접 만든 디저트와 수제 젤라토.","ru":"Меню Le Cinque Lune в Пьенце: сладкий и солёный бранч, паста пичи ручной работы, тарелки Валь д'Орча, домашние десерты и ремесленное джелато.","zh":"皮恩扎Le Cinque Lune菜单：甜咸早午餐、手工皮奇面、奥尔恰河谷拼盘、自制甜点和手工冰淇淋。","es":"Menú Le Cinque Lune Pienza: brunch dulce y salado, pici hechos a mano, tablas del Val d'Orcia, postres caseros y gelato artesanal."}
   };
 
   const ALLERGEN_NAMES = {
-    1:{it:"Glutine",en:"Gluten",ko:"글루텐",ru:"Глютен"},
-    2:{it:"Crostacei",en:"Crustaceans",ko:"갑각류",ru:"Ракообразные"},
-    3:{it:"Uova",en:"Eggs",ko:"달걀",ru:"Яйца"},
-    4:{it:"Pesce",en:"Fish",ko:"생선",ru:"Рыба"},
-    5:{it:"Arachidi",en:"Peanuts",ko:"땅콩",ru:"Арахис"},
-    6:{it:"Soia",en:"Soy",ko:"대두",ru:"Соя"},
-    7:{it:"Latte",en:"Milk",ko:"우유",ru:"Молоко"},
-    8:{it:"Frutta a guscio",en:"Tree nuts",ko:"견과류",ru:"Орехи"},
-    9:{it:"Sedano",en:"Celery",ko:"셀러리",ru:"Сельдерей"},
-    10:{it:"Senape",en:"Mustard",ko:"겨자",ru:"Горчица"},
-    11:{it:"Semi di sesamo",en:"Sesame",ko:"참깨",ru:"Кунжут"},
-    12:{it:"Solfiti",en:"Sulphites",ko:"아황산염",ru:"Сульфиты"},
-    13:{it:"Lupini",en:"Lupin",ko:"루핀",ru:"Люпин"},
-    14:{it:"Molluschi",en:"Molluscs",ko:"연체류",ru:"Моллюски"}
+    1:{it:"Glutine",en:"Gluten",ko:"글루텐",ru:"Глютен",zh:"麸质",es:"Gluten"},
+    2:{it:"Crostacei",en:"Crustaceans",ko:"갑각류",ru:"Ракообразные",zh:"甲壳类",es:"Crustáceos"},
+    3:{it:"Uova",en:"Eggs",ko:"달걀",ru:"Яйца",zh:"鸡蛋",es:"Huevos"},
+    4:{it:"Pesce",en:"Fish",ko:"생선",ru:"Рыба",zh:"鱼",es:"Pescado"},
+    5:{it:"Arachidi",en:"Peanuts",ko:"땅콩",ru:"Арахис",zh:"花生",es:"Cacahuetes"},
+    6:{it:"Soia",en:"Soy",ko:"대두",ru:"Соя",zh:"大豆",es:"Soja"},
+    7:{it:"Latte",en:"Milk",ko:"우유",ru:"Молоко",zh:"牛奶",es:"Leche"},
+    8:{it:"Frutta a guscio",en:"Tree nuts",ko:"견과류",ru:"Орехи",zh:"坚果",es:"Frutos de cáscara"},
+    9:{it:"Sedano",en:"Celery",ko:"셀러리",ru:"Сельдерей",zh:"芹菜",es:"Apio"},
+    10:{it:"Senape",en:"Mustard",ko:"겨자",ru:"Горчица",zh:"芥末",es:"Mostaza"},
+    11:{it:"Semi di sesamo",en:"Sesame",ko:"참깨",ru:"Кунжут",zh:"芝麻",es:"Sésamo"},
+    12:{it:"Solfiti",en:"Sulphites",ko:"아황산염",ru:"Сульфиты",zh:"亚硫酸盐",es:"Sulfitos"},
+    13:{it:"Lupini",en:"Lupin",ko:"루핀",ru:"Люпин",zh:"羽扇豆",es:"Altramuces"},
+    14:{it:"Molluschi",en:"Molluscs",ko:"연체류",ru:"Моллюски",zh:"软体动物",es:"Moluscos"}
   };
 
   const DIET = {
@@ -774,168 +776,168 @@
   };
 
   const MENU = [
-    {"id":"colazione","title":{"it":"Colazione","en":"Brunch","ko":"아침 식사","ru":"Завтрак"},"items":[
-      {"name":{"it":"Brioche farcite","en":"Filled brioche","ko":"속 채운 브리오슈","ru":"Бриоши с начинкой"},"price":"3","desc":{"it":"Marmellata, cioccolato o crema.","en":"Jam, chocolate or pastry cream.","ko":"잼, 초콜릿 또는 커스터드 크림.","ru":"Джем, шоколад или крем."},"allergens":[1,3,5,7,8]},
-      {"name":{"it":"Dolci al cucchiaio","en":"Spoon desserts","ko":"스푼 디저트","ru":"Десерты на ложке"},"price":"6","desc":null,"allergens":[1,3,5,7,8]},
-      {"name":{"it":"Biscotteria","en":"Assorted biscuits","ko":"비스킷 모듬","ru":"Ассорти печенья"},"price":"3/hg","desc":null,"allergens":[1,3,5,7,8]},
-      {"name":{"it":"Frutta fresca","en":"Fresh fruit","ko":"신선한 과일","ru":"Свежие фрукты"},"price":"6","desc":null},
-      {"name":{"it":"Yogurt fresco","en":"Fresh yogurt","ko":"신선한 요거트","ru":"Свежий йогурт"},"price":"7","desc":{"it":"Frutta di stagione, cereali croccanti e miele.","en":"Seasonal fruit, crunchy granola and honey.","ko":"제철 과일, 바삭한 시리얼, 꿀.","ru":"Сезонные фрукты, хрустящие мюсли и мёд."},"allergens":[1,5,7,8]},
-      {"name":{"it":"Selezione di torte artigianali a fette","en":"Artisan cake selection (sliced)","ko":"수제 케이크 슬라이스","ru":"Домашние торты (нарезка)"},"price":"7","desc":null,"allergens":[1,3,5,7,8]},
-      {"name":"French toast","price":"11","desc":{"it":"Frutta fresca, sciroppo d'acero e zucchero a velo.","en":"Fresh fruit, maple syrup and icing sugar.","ko":"신선한 과일, 메이플 시럽, 슈가파우더.","ru":"Свежие фрукты, кленовый сироп и сахарная пудра."},"allergens":[1,3,7]},
-      {"name":{"it":"Involtini di ricotta","en":"Ricotta rolls","ko":"리코타 롤","ru":"Блинчики сладкие"},"price":"10","desc":{"it":"Miele e noci.","en":"Honey and walnuts.","ko":"꿀과 호두.","ru":"Мёд и грецкие орехи."},"allergens":[1,3,7,8]},
-      {"name":"Crêpes","price":"9","desc":{"it":"Nutella bianca o nera, banana e zucchero a velo.","en":"White or classic Nutella, banana and icing sugar.","ko":"화이트 또는 클래식 누텔라, 바나나, 슈가파우더.","ru":"Белая или классическая Nutella, банан и сахарная пудра."},"allergens":[1,3,5,7,8]},
-      {"name":{"it":"Frittelle alla ricotta","en":"Ricotta fritters","ko":"리코타 프리터","ru":"Сырники"},"price":"9","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Pancake classico","en":"Classic pancake","ko":"클래식 팬케이크","ru":"Классический панкейк"},"price":"9","desc":{"it":"Miele, zucchero a velo e panna.","en":"Honey, icing sugar and whipped cream.","ko":"꿀, 슈가파우더, 휘핑크림.","ru":"Мёд, сахарная пудра и взбитые сливки."},"allergens":[1,3,7,8]},
-      {"name":{"it":"Pancakes","en":"Pancakes","ko":"팬케이크","ru":"Панкейки"},"price":"10","desc":{"it":"Marmellata, noci e frutta fresca.","en":"Jam, walnuts and fresh fruit.","ko":"잼, 호두, 신선한 과일.","ru":"Джем, орехи и свежие фрукты."},"allergens":[1,3,7,8]},
-      {"name":{"it":"Omelette classica","en":"Classic omelette","ko":"클래식 오믈렛","ru":"Классический омлет"},"price":"9","desc":null,"allergens":[3]},
-      {"name":{"it":"Omelette con prosciutto cotto e formaggio","en":"Ham and cheese omelette","ko":"햄 치즈 오믈렛","ru":"Омлет с ветчиной и сыром"},"price":"11","desc":null,"allergens":[3,7]},
-      {"name":{"it":"Omelette con verdure","en":"Vegetable omelette","ko":"채소 오믈렛","ru":"Омлет с овощами"},"price":"11","desc":null,"allergens":[3]},
-      {"name":"Avocado toast","price":"13","desc":{"it":"Burrata, salmone affumicato, semi di sesamo e pomodorini ciliegino.","en":"Burrata, smoked salmon, sesame seeds and cherry tomatoes.","ko":"부라타, 훈제 연어, 참깨, 방울토마토.","ru":"Буррата, копчёный лосось, кунжут и помидоры черри."},"allergens":[1,4,7,11]},
-      {"name":{"it":"Toast tradizionale","en":"Traditional toast","ko":"전통 토스트","ru":"Традиционный тост"},"price":"7","desc":{"it":"Prosciutto cotto e formaggio.","en":"Ham and cheese.","ko":"햄과 치즈.","ru":"Ветчина и сыр."},"allergens":[1,7]},
-      {"name":{"it":"Toast vegetariano","en":"Vegetarian toast","ko":"채식 토스트","ru":"Вегетарианский тост"},"price":"7","desc":null,"allergens":[1]},
-      {"name":{"it":"Selezione di salumi","en":"Cured meat selection","ko":"살루미 모듬","ru":"Ассорти салуми"},"price":"16","desc":null},
-      {"name":{"it":"Selezione di formaggi della Val d'Orcia","en":"Val d'Orcia cheese selection","ko":"발도르차 치즈 셀렉션","ru":"Ассорти сыров Валь д'Орча"},"price":"18","desc":{"it":"Miele e marmellate.","en":"Honey and jams.","ko":"꿀과 잼.","ru":"Мёд и джемы."},"allergens":[7]},
-      {"name":{"it":"Involtini di carne di Chianina","en":"Chianina beef rolls","ko":"키아니나 소고기 롤","ru":"Рулетики из мяса кьянины"},"price":"14","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Verdure fresche","en":"Fresh vegetables","ko":"신선한 채소","ru":"Свежие овощи"},"price":"7","desc":null}
+    {"id":"colazione","title":{"it":"Colazione","en":"Brunch","ko":"아침 식사","ru":"Завтрак","zh":"早餐","es":"Desayuno"},"items":[
+      {"name":{"it":"Brioche farcite","en":"Filled brioche","ko":"속 채운 브리오슈","ru":"Бриоши с начинкой","zh":"奶油面包卷","es":"Brioches rellenos"},"price":"3","desc":{"it":"Marmellata, cioccolato o crema.","en":"Jam, chocolate or pastry cream.","ko":"잼, 초콜릿 또는 커스터드 크림.","ru":"Джем, шоколад или крем.","zh":"果酱、巧克力或奶油。","es":"Mermelada, chocolate o crema."},"allergens":[1,3,5,7,8]},
+      {"name":{"it":"Dolci al cucchiaio","en":"Spoon desserts","ko":"스푼 디저트","ru":"Десерты на ложке","zh":"匙子甜点","es":"Postres de cuchara"},"price":"6","desc":null,"allergens":[1,3,5,7,8]},
+      {"name":{"it":"Biscotteria","en":"Assorted biscuits","ko":"비스킷 모듬","ru":"Ассорти печенья","zh":"综合饼干","es":"Surtido de galletas"},"price":"3/hg","desc":null,"allergens":[1,3,5,7,8]},
+      {"name":{"it":"Frutta fresca","en":"Fresh fruit","ko":"신선한 과일","ru":"Свежие фрукты","zh":"新鲜水果","es":"Fruta fresca"},"price":"6","desc":null},
+      {"name":{"it":"Yogurt fresco","en":"Fresh yogurt","ko":"신선한 요거트","ru":"Свежий йогурт","zh":"新鲜酸奶","es":"Yogur fresco"},"price":"7","desc":{"it":"Frutta di stagione, cereali croccanti e miele.","en":"Seasonal fruit, crunchy granola and honey.","ko":"제철 과일, 바삭한 시리얼, 꿀.","ru":"Сезонные фрукты, хрустящие мюсли и мёд.","zh":"时令水果、脆麦片和蜂蜜。","es":"Fruta de temporada, granola crujiente y miel."},"allergens":[1,5,7,8]},
+      {"name":{"it":"Selezione di torte artigianali a fette","en":"Artisan cake selection (sliced)","ko":"수제 케이크 슬라이스","ru":"Домашние торты (нарезка)","zh":"手工蛋糕精选（切片）","es":"Selección de tartas artesanales (porciones)"},"price":"7","desc":null,"allergens":[1,3,5,7,8]},
+      {"name":"French toast","price":"11","desc":{"it":"Frutta fresca, sciroppo d'acero e zucchero a velo.","en":"Fresh fruit, maple syrup and icing sugar.","ko":"신선한 과일, 메이플 시럽, 슈가파우더.","ru":"Свежие фрукты, кленовый сироп и сахарная пудра.","zh":"新鲜水果、枫糖浆和糖粉。","es":"Fruta fresca, sirope de arce y azúcar glas."},"allergens":[1,3,7]},
+      {"name":{"it":"Involtini di ricotta","en":"Ricotta rolls","ko":"리코타 롤","ru":"Блинчики сладкие","zh":"里科塔卷","es":"Rollitos de ricotta"},"price":"10","desc":{"it":"Miele e noci.","en":"Honey and walnuts.","ko":"꿀과 호두.","ru":"Мёд и грецкие орехи.","zh":"蜂蜜和核桃。","es":"Miel y nueces."},"allergens":[1,3,7,8]},
+      {"name":"Crêpes","price":"9","desc":{"it":"Nutella bianca o nera, banana e zucchero a velo.","en":"White or classic Nutella, banana and icing sugar.","ko":"화이트 또는 클래식 누텔라, 바나나, 슈가파우더.","ru":"Белая или классическая Nutella, банан и сахарная пудра.","zh":"白色或经典能多益，香蕉和糖粉。","es":"Nutella blanca o clásica, plátano y azúcar glas."},"allergens":[1,3,5,7,8]},
+      {"name":{"it":"Frittelle alla ricotta","en":"Ricotta fritters","ko":"리코타 프리터","ru":"Сырники","zh":"里科塔煎饼","es":"Buñuelos de ricotta"},"price":"9","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Pancake classico","en":"Classic pancake","ko":"클래식 팬케이크","ru":"Классический панкейк","zh":"经典松饼","es":"Pancake clásico"},"price":"9","desc":{"it":"Miele, zucchero a velo e panna.","en":"Honey, icing sugar and whipped cream.","ko":"꿀, 슈가파우더, 휘핑크림.","ru":"Мёд, сахарная пудра и взбитые сливки.","zh":"蜂蜜、糖粉和鲜奶油。","es":"Miel, azúcar glas y nata montada."},"allergens":[1,3,7,8]},
+      {"name":{"it":"Pancakes","en":"Pancakes","ko":"팬케이크","ru":"Панкейки","zh":"松饼","es":"Pancakes"},"price":"10","desc":{"it":"Marmellata, noci e frutta fresca.","en":"Jam, walnuts and fresh fruit.","ko":"잼, 호두, 신선한 과일.","ru":"Джем, орехи и свежие фрукты.","zh":"果酱、核桃和新鲜水果。","es":"Mermelada, nueces y fruta fresca."},"allergens":[1,3,7,8]},
+      {"name":{"it":"Omelette classica","en":"Classic omelette","ko":"클래식 오믈렛","ru":"Классический омлет","zh":"经典煎蛋卷","es":"Tortilla francesa clásica"},"price":"9","desc":null,"allergens":[3]},
+      {"name":{"it":"Omelette con prosciutto cotto e formaggio","en":"Ham and cheese omelette","ko":"햄 치즈 오믈렛","ru":"Омлет с ветчиной и сыром","zh":"火腿芝士煎蛋卷","es":"Tortilla con jamón york y queso"},"price":"11","desc":null,"allergens":[3,7]},
+      {"name":{"it":"Omelette con verdure","en":"Vegetable omelette","ko":"채소 오믈렛","ru":"Омлет с овощами","zh":"蔬菜煎蛋卷","es":"Tortilla con verduras"},"price":"11","desc":null,"allergens":[3]},
+      {"name":"Avocado toast","price":"13","desc":{"it":"Burrata, salmone affumicato, semi di sesamo e pomodorini ciliegino.","en":"Burrata, smoked salmon, sesame seeds and cherry tomatoes.","ko":"부라타, 훈제 연어, 참깨, 방울토마토.","ru":"Буррата, копчёный лосось, кунжут и помидоры черри.","zh":"布拉塔、熏三文鱼、芝麻和樱桃番茄。","es":"Burrata, salmón ahumado, semillas de sésamo y tomates cherry."},"allergens":[1,4,7,11]},
+      {"name":{"it":"Toast tradizionale","en":"Traditional toast","ko":"전통 토스트","ru":"Традиционный тост","zh":"传统吐司","es":"Tostada tradicional"},"price":"7","desc":{"it":"Prosciutto cotto e formaggio.","en":"Ham and cheese.","ko":"햄과 치즈.","ru":"Ветчина и сыр.","zh":"火腿和芝士。","es":"Jamón york y queso."},"allergens":[1,7]},
+      {"name":{"it":"Toast vegetariano","en":"Vegetarian toast","ko":"채식 토스트","ru":"Вегетарианский тост","zh":"素食吐司","es":"Tostada vegetariana"},"price":"7","desc":null,"allergens":[1]},
+      {"name":{"it":"Selezione di salumi","en":"Cured meat selection","ko":"살루미 모듬","ru":"Ассорти салуми","zh":"熟食精选","es":"Selección de embutidos"},"price":"16","desc":null},
+      {"name":{"it":"Selezione di formaggi della Val d'Orcia","en":"Val d'Orcia cheese selection","ko":"발도르차 치즈 셀렉션","ru":"Ассорти сыров Валь д'Орча","zh":"奥尔恰河谷奶酪精选","es":"Selección de quesos del Val d'Orcia"},"price":"18","desc":{"it":"Miele e marmellate.","en":"Honey and jams.","ko":"꿀과 잼.","ru":"Мёд и джемы.","zh":"蜂蜜和果酱。","es":"Miel y mermeladas."},"allergens":[7]},
+      {"name":{"it":"Involtini di carne di Chianina","en":"Chianina beef rolls","ko":"키아니나 소고기 롤","ru":"Рулетики из мяса кьянины","zh":"基亚尼纳牛肉卷","es":"Rollitos de carne de Chianina"},"price":"14","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Verdure fresche","en":"Fresh vegetables","ko":"신선한 채소","ru":"Свежие овощи","zh":"新鲜蔬菜","es":"Verduras frescas"},"price":"7","desc":null}
     ]},
-    {"id":"antipasti","title":{"it":"Antipasti","en":"Starters","ko":"안티파스티 (전채)","ru":"Закуски"},"items":[
-      {"name":{"it":"Parmigiana di melanzane","en":"Eggplant parmigiana","ko":"가지 파르미지아나","ru":"Пармиджана из баклажанов"},"price":"13","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Tagliere Cinque Lune (2 persone)","en":"Cinque Lune board (2 people)","ko":"친퀘 루네 보드 (2인)","ru":"Тальере Cinque Lune (на 2)"},"price":"25","desc":null,"allergens":[7]},
-      {"name":{"it":"Degustazione di formaggi toscani","en":"Tuscan cheese tasting","ko":"토스카나 치즈 시식","ru":"Дегустация тосканских сыров"},"price":"18","desc":{"it":"Miele e marmellate.","en":"Honey and jams.","ko":"꿀과 잼.","ru":"Мёд и джемы."},"allergens":[7]},
-      {"name":{"it":"Assortimento di salumi tipici locali","en":"Local cured meat assortment","ko":"로컬 살루미 모듬","ru":"Ассорти местных салуми"},"price":"17","desc":null},
-      {"name":{"it":"Carpaccio di Chianina","en":"Chianina beef carpaccio","ko":"키아니나 카르파초","ru":"Карпаччо из кьянины"},"price":"16","desc":null,"allergens":[10]},
-      {"name":{"it":"Insalata caprese","en":"Caprese salad","ko":"카프레제 샐러드","ru":"Салат «Капрезе»"},"price":"15","desc":{"it":"Mozzarella di bufala e pomodoro.","en":"Buffalo mozzarella and tomato.","ko":"버팔로 모차렐라와 토마토.","ru":"Моцарелла из буйволиного молока и томаты."},"allergens":[7]},
-      {"name":{"it":"Carpaccio di zucchine","en":"Zucchini carpaccio","ko":"주키니 카르파초","ru":"Карпаччо из цукини"},"price":"15","desc":{"it":"Menta, acciughe e senape.","en":"Mint, anchovies and mustard.","ko":"민트, 안초비, 머스터드.","ru":"Мята, анчоусы и горчица."},"allergens":[4,10]},
-      {"name":{"it":"Panzanella toscana","en":"Tuscan panzanella","ko":"토스카나 판자넬라","ru":"Тосканская панзанелла"},"price":"15","desc":null,"allergens":[1,9]}
+    {"id":"antipasti","title":{"it":"Antipasti","en":"Starters","ko":"안티파스티 (전채)","ru":"Закуски","zh":"前菜","es":"Entrantes"},"items":[
+      {"name":{"it":"Parmigiana di melanzane","en":"Eggplant parmigiana","ko":"가지 파르미지아나","ru":"Пармиджана из баклажанов","zh":"茄子帕尔玛","es":"Berenjena a la parmesana"},"price":"13","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Tagliere Cinque Lune (2 persone)","en":"Cinque Lune board (2 people)","ko":"친퀘 루네 보드 (2인)","ru":"Тальере Cinque Lune (на 2)","zh":"五月之月拼盘（2人）","es":"Tabla Cinque Lune (2 personas)"},"price":"25","desc":null,"allergens":[7]},
+      {"name":{"it":"Degustazione di formaggi toscani","en":"Tuscan cheese tasting","ko":"토스카나 치즈 시식","ru":"Дегустация тосканских сыров","zh":"托斯卡纳奶酪品鉴","es":"Degustación de quesos toscanos"},"price":"18","desc":{"it":"Miele e marmellate.","en":"Honey and jams.","ko":"꿀과 잼.","ru":"Мёд и джемы.","zh":"蜂蜜和果酱。","es":"Miel y mermeladas."},"allergens":[7]},
+      {"name":{"it":"Assortimento di salumi tipici locali","en":"Local cured meat assortment","ko":"로컬 살루미 모듬","ru":"Ассорти местных салуми","zh":"当地熟食拼盘","es":"Surtido de embutidos locales"},"price":"17","desc":null},
+      {"name":{"it":"Carpaccio di Chianina","en":"Chianina beef carpaccio","ko":"키아니나 카르파초","ru":"Карпаччо из кьянины","zh":"基亚尼纳牛肉薄片","es":"Carpaccio de Chianina"},"price":"16","desc":null,"allergens":[10]},
+      {"name":{"it":"Insalata caprese","en":"Caprese salad","ko":"카프레제 샐러드","ru":"Салат «Капрезе»","zh":"卡普雷塞沙拉","es":"Ensalada caprese"},"price":"15","desc":{"it":"Mozzarella di bufala e pomodoro.","en":"Buffalo mozzarella and tomato.","ko":"버팔로 모차렐라와 토마토.","ru":"Моцарелла из буйволиного молока и томаты.","zh":"水牛马苏里拉和番茄。","es":"Mozzarella de búfala y tomate."},"allergens":[7]},
+      {"name":{"it":"Carpaccio di zucchine","en":"Zucchini carpaccio","ko":"주키니 카르파초","ru":"Карпаччо из цукини","zh":"西葫芦薄片","es":"Carpaccio de calabacín"},"price":"15","desc":{"it":"Menta, acciughe e senape.","en":"Mint, anchovies and mustard.","ko":"민트, 안초비, 머스터드.","ru":"Мята, анчоусы и горчица.","zh":"薄荷、凤尾鱼和芥末。","es":"Menta, anchoas y mostaza."},"allergens":[4,10]},
+      {"name":{"it":"Panzanella toscana","en":"Tuscan panzanella","ko":"토스카나 판자넬라","ru":"Тосканская панзанелла","zh":"托斯卡纳面包沙拉","es":"Panzanella toscana"},"price":"15","desc":null,"allergens":[1,9]}
     ]},
-    {"id":"primi","title":{"it":"Primi","en":"First Courses","ko":"프리미 (첫 번째 코스)","ru":"Первые блюда"},"items":[
-      {"name":{"it":"Pici al ragù di cinghiale","en":"Pici with wild boar ragù","ko":"멧돼지 라구 피치","ru":"Пичи с рагу из кабана"},"price":"15","desc":null,"allergens":[1,9]},
-      {"name":{"it":"Pici cacio e pepe","en":"Pici cacio e pepe","ko":"카치오 에 페페 피치","ru":"Пичи качо э пепе"},"price":"15","desc":null,"allergens":[1,7]},
-      {"name":{"it":"Pici all'aglione della Valdichiana","en":"Pici with Valdichiana aglione sauce","ko":"발디키아나 알리오네 피치","ru":"Пичи с соусом алионе из Вальдикьяны"},"price":"14","desc":null,"allergens":[1]},
-      {"name":{"it":"Pici al ragù bianco di Chianina","en":"Pici with Chianina white ragù","ko":"키아니나 화이트 라구 피치","ru":"Пичи с белым рагу из кьянины"},"price":"15","desc":null,"allergens":[1,9]},
-      {"name":{"it":"Ravioli ricotta e spinaci","en":"Ricotta and spinach ravioli","ko":"리코타 시금치 라비올리","ru":"Равиоли с рикоттой и шпинатом"},"price":"13","desc":{"it":"Al burro e salvia.","en":"Butter and sage.","ko":"버터와 세이지.","ru":"Сливочное масло и шалфей."},"allergens":[1,3,7]},
-      {"name":{"it":"Delizia di gnocchi di semolino","en":"Semolina gnocchi delight","ko":"세몰리나 뇨키 딜라이트","ru":"Ньокки из семолины"},"price":"18","desc":{"it":"Con fonduta di pecorino e tartufo fresco.","en":"With pecorino fondue and fresh truffle.","ko":"페코리노 퐁뒤와 신선한 트러플.","ru":"С фондю из пекорино и свежим трюфелем."},"allergens":[1,3,7]},
-      {"name":{"it":"Millefoglie di lasagna","en":"Lasagna millefeuille","ko":"라자냐 밀푀유","ru":"Лазанья «мильфёй»"},"price":"14","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Lasagna al pesto","en":"Pesto lasagna","ko":"페스토 라자냐","ru":"Лазанья с песто"},"price":"14","desc":{"it":"Con pomodorini.","en":"With cherry tomatoes.","ko":"방울토마토를 곁들인.","ru":"С помидорами черри."},"allergens":[1,3,7,8]}
+    {"id":"primi","title":{"it":"Primi","en":"First Courses","ko":"프리미 (첫 번째 코스)","ru":"Первые блюда","zh":"第一道菜","es":"Primeros platos"},"items":[
+      {"name":{"it":"Pici al ragù di cinghiale","en":"Pici with wild boar ragù","ko":"멧돼지 라구 피치","ru":"Пичи с рагу из кабана","zh":"野猪肉酱皮奇","es":"Pici con ragù de jabalí"},"price":"15","desc":null,"allergens":[1,9]},
+      {"name":{"it":"Pici cacio e pepe","en":"Pici cacio e pepe","ko":"카치오 에 페페 피치","ru":"Пичи качо э пепе","zh":"芝士黑胡椒皮奇","es":"Pici cacio e pepe"},"price":"15","desc":null,"allergens":[1,7]},
+      {"name":{"it":"Pici all'aglione della Valdichiana","en":"Pici with Valdichiana aglione sauce","ko":"발디키아나 알리오네 피치","ru":"Пичи с соусом алионе из Вальдикьяны","zh":"瓦尔迪基亚纳蒜末皮奇","es":"Pici al aglione de Valdichiana"},"price":"14","desc":null,"allergens":[1]},
+      {"name":{"it":"Pici al ragù bianco di Chianina","en":"Pici with Chianina white ragù","ko":"키아니나 화이트 라구 피치","ru":"Пичи с белым рагу из кьянины","zh":"基亚尼纳白酱皮奇","es":"Pici con ragù blanco de Chianina"},"price":"15","desc":null,"allergens":[1,9]},
+      {"name":{"it":"Ravioli ricotta e spinaci","en":"Ricotta and spinach ravioli","ko":"리코타 시금치 라비올리","ru":"Равиоли с рикоттой и шпинатом","zh":"里科塔菠菜饺子","es":"Ravioli de ricotta y espinacas"},"price":"13","desc":{"it":"Al burro e salvia.","en":"Butter and sage.","ko":"버터와 세이지.","ru":"Сливочное масло и шалфей.","zh":"配黄油和鼠尾草。","es":"Con mantequilla y salvia."},"allergens":[1,3,7]},
+      {"name":{"it":"Delizia di gnocchi di semolino","en":"Semolina gnocchi delight","ko":"세몰리나 뇨키 딜라이트","ru":"Ньокки из семолины","zh":"粗麦粉团享受","es":"Delizia de gnocchi de sémola"},"price":"18","desc":{"it":"Con fonduta di pecorino e tartufo fresco.","en":"With pecorino fondue and fresh truffle.","ko":"페코리노 퐁뒤와 신선한 트러플.","ru":"С фондю из пекорино и свежим трюфелем.","zh":"配佩科里诺芝士火锅和新鲜松露。","es":"Con fondue de pecorino y trufa fresca."},"allergens":[1,3,7]},
+      {"name":{"it":"Millefoglie di lasagna","en":"Lasagna millefeuille","ko":"라자냐 밀푀유","ru":"Лазанья «мильфёй»","zh":"千层面","es":"Milhojas de lasaña"},"price":"14","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Lasagna al pesto","en":"Pesto lasagna","ko":"페스토 라자냐","ru":"Лазанья с песто","zh":"青酱千层面","es":"Lasaña al pesto"},"price":"14","desc":{"it":"Con pomodorini.","en":"With cherry tomatoes.","ko":"방울토마토를 곁들인.","ru":"С помидорами черри.","zh":"配樱桃番茄。","es":"Con tomates cherry."},"allergens":[1,3,7,8]}
     ]},
-    {"id":"secondi","title":{"it":"Secondi","en":"Main Courses","ko":"세콘디 (메인 요리)","ru":"Вторые блюда"},"items":[
-      {"name":{"it":"Pollo alla cacciatora","en":"Hunter's chicken","ko":"카치아토라 치킨","ru":"Курица по-охотничьи"},"price":"17","desc":{"it":"Con contorno di verdure.","en":"Served with vegetables.","ko":"채소 사이드를 곁들인.","ru":"С овощным гарниром."},"allergens":[9,12]},
-      {"name":{"it":"Filetto di maiale alle erbe aromatiche con lardo di Colonnata","en":"Herb pork fillet with Colonnata lardo","ko":"허브 돼지 안심 콜론나타 라르도","ru":"Филе свинины с травами и лардо из Колоннаты"},"price":"19","desc":{"it":"E verdure grigliate dell'orto toscano.","en":"With grilled vegetables from the Tuscan garden.","ko":"토스카나 채소 그릴 구이를 곁들인.","ru":"С овощами гриль с тосканского огорода."}},
-      {"name":{"it":"Brasato di manzo al Vino Nobile di Montepulciano","en":"Beef braised in Vino Nobile di Montepulciano","ko":"비노 노빌레 소고기 브레이즈","ru":"Тушёная говядина в Вино Нобиле ди Монтепульчано"},"price":"21","desc":{"it":"Con spicchi di patate arrosto.","en":"With roast potato wedges.","ko":"구운 감자 웨지를 곁들인.","ru":"С дольками жареного картофеля."},"allergens":[9,12]},
-      {"name":{"it":"Anatra all'arancia arrosto","en":"Roast duck à l'orange","ko":"오렌지 로스트 덕","ru":"Утка с апельсином"},"price":"22","desc":{"it":"Con verdure saltate.","en":"With sautéed vegetables.","ko":"볶은 채소를 곁들인.","ru":"С обжаренными овощами."},"allergens":[12]},
-      {"name":{"it":"Vitello tonnato","en":"Vitello tonnato","ko":"비텔로 톤나토","ru":"Вителло тоннато"},"price":"20","desc":null,"allergens":[3,4]}
+    {"id":"secondi","title":{"it":"Secondi","en":"Main Courses","ko":"세콘디 (메인 요리)","ru":"Вторые блюда","zh":"第二道菜","es":"Segundos platos"},"items":[
+      {"name":{"it":"Pollo alla cacciatora","en":"Hunter's chicken","ko":"카치아토라 치킨","ru":"Курица по-охотничьи","zh":"猎人炖鸡","es":"Pollo a la cazadora"},"price":"17","desc":{"it":"Con contorno di verdure.","en":"Served with vegetables.","ko":"채소 사이드를 곁들인.","ru":"С овощным гарниром.","zh":"配蔬菜。","es":"Con guarnición de verduras."},"allergens":[9,12]},
+      {"name":{"it":"Filetto di maiale alle erbe aromatiche con lardo di Colonnata","en":"Herb pork fillet with Colonnata lardo","ko":"허브 돼지 안심 콜론나타 라르도","ru":"Филе свинины с травами и лардо из Колоннаты","zh":"香草猪里脊配科隆纳塔猪背油","es":"Solomillo de cerdo a las hierbas con lardo de Colonnata"},"price":"19","desc":{"it":"E verdure grigliate dell'orto toscano.","en":"With grilled vegetables from the Tuscan garden.","ko":"토스카나 채소 그릴 구이를 곁들인.","ru":"С овощами гриль с тосканского огорода.","zh":"配托斯卡纳菜园烤蔬菜。","es":"Con verduras a la parrilla del huerto toscano."}},
+      {"name":{"it":"Brasato di manzo al Vino Nobile di Montepulciano","en":"Beef braised in Vino Nobile di Montepulciano","ko":"비노 노빌레 소고기 브레이즈","ru":"Тушёная говядина в Вино Нобиле ди Монтепульчано","zh":"蒙泰普尔恰诺贵族葡萄酒炖牛肉","es":"Buey estofado al Vino Nobile di Montepulciano"},"price":"21","desc":{"it":"Con spicchi di patate arrosto.","en":"With roast potato wedges.","ko":"구운 감자 웨지를 곁들인.","ru":"С дольками жареного картофеля.","zh":"配烤土豆块。","es":"Con gajos de patata asada."},"allergens":[9,12]},
+      {"name":{"it":"Anatra all'arancia arrosto","en":"Roast duck à l'orange","ko":"오렌지 로스트 덕","ru":"Утка с апельсином","zh":"烤橙汁鸭","es":"Pato asado a la naranja"},"price":"22","desc":{"it":"Con verdure saltate.","en":"With sautéed vegetables.","ko":"볶은 채소를 곁들인.","ru":"С обжаренными овощами.","zh":"配炒蔬菜。","es":"Con verduras salteadas."},"allergens":[12]},
+      {"name":{"it":"Vitello tonnato","en":"Vitello tonnato","ko":"비텔로 톤나토","ru":"Вителло тоннато","zh":"金枪鱼汁小牛肉","es":"Vitello tonnato"},"price":"20","desc":null,"allergens":[3,4]}
     ]},
-    {"id":"insalatone","title":{"it":"Insalatone","en":"Substantial Salads","ko":"든든한 샐러드","ru":"Большие салаты"},"items":[
-      {"name":{"it":"Insalata Caesar","en":"Caesar salad","ko":"시저 샐러드","ru":"Салат «Цезарь»"},"price":"13","desc":{"it":"Lattuga romana, pollo, crostini, parmigiano, salsa caesar.","en":"Romaine lettuce, chicken, croutons, parmesan, Caesar dressing.","ko":"로메인 상추, 치킨, 크루통, 파르메산, 시저 드레싱.","ru":"Салат ромэн, курица, гренки, пармезан, соус «Цезарь»."},"allergens":[1,7]},
-      {"name":{"it":"Nordica","en":"Nordic","ko":"노르딕","ru":"«Нордика»"},"price":"14","desc":{"it":"Salmone affumicato, rucola, feta, pomodorini, vinaigrette al limone.","en":"Smoked salmon, rocket, feta, cherry tomatoes, lemon vinaigrette.","ko":"훈제 연어, 루꼴라, 페타 치즈, 방울토마토, 레몬 비네그레트.","ru":"Копчёный лосось, руккола, фета, помидоры черри, лимонный винегрет."},"allergens":[4,7,12]},
-      {"name":{"it":"Vegetariana","en":"Vegetarian","ko":"채식","ru":"Вегетарианский"},"price":"13","desc":{"it":"Lattuga, carote, sedano, cetrioli, pomodorini, olive e mais.","en":"Lettuce, carrots, celery, cucumber, cherry tomatoes, olives and corn.","ko":"양상추, 당근, 셀러리, 오이, 방울토마토, 올리브, 옥수수.","ru":"Салат, морковь, сельдерей, огурцы, помидоры черри, оливки и кукуруза."},"allergens":[9]},
-      {"name":{"it":"Orto e cereali","en":"Garden and grains","ko":"채소와 곡물","ru":"Овощи и злаки"},"price":"12","desc":{"it":"Lattuga, cereali, verdure, quinoa, olio extravergine di oliva.","en":"Lettuce, grains, vegetables, quinoa, extra virgin olive oil.","ko":"양상추, 곡물, 채소, 퀴노아, 엑스트라 버진 올리브 오일.","ru":"Салат, злаки, овощи, киноа, оливковое масло extra virgin."},"allergens":[1]},
-      {"name":"Panzanella","price":"14","desc":{"it":"Pomodori, pane raffermo, cetrioli, cipolla rossa, basilico, olio extravergine d'oliva.","en":"Tomatoes, stale bread, cucumber, red onion, basil, extra virgin olive oil.","ko":"토마토, 마른 빵, 오이, 적양파, 바질, 엑스트라 버진 올리브 오일.","ru":"Помидоры, чёрствый хлеб, огурцы, красный лук, базилик, оливковое масло extra virgin."},"allergens":[1]},
-      {"name":{"it":"Nizzarda","en":"Niçoise","ko":"니수아즈","ru":"«Ниццарда»"},"price":"15","desc":{"it":"Tonno, uovo sodo, patate, olive e olio extravergine d'oliva.","en":"Tuna, hard-boiled egg, potatoes, olives and extra virgin olive oil.","ko":"참치, 삶은 달걀, 감자, 올리브, 엑스트라 버진 올리브 오일.","ru":"Тунец, варёное яйцо, картофель, оливки и оливковое масло extra virgin."},"allergens":[1,3,4]}
+    {"id":"insalatone","title":{"it":"Insalatone","en":"Substantial Salads","ko":"든든한 샐러드","ru":"Большие салаты","zh":"大份沙拉","es":"Ensaladas"},"items":[
+      {"name":{"it":"Insalata Caesar","en":"Caesar salad","ko":"시저 샐러드","ru":"Салат «Цезарь»","zh":"凯撒沙拉","es":"Ensalada César"},"price":"13","desc":{"it":"Lattuga romana, pollo, crostini, parmigiano, salsa caesar.","en":"Romaine lettuce, chicken, croutons, parmesan, Caesar dressing.","ko":"로메인 상추, 치킨, 크루통, 파르메산, 시저 드레싱.","ru":"Салат ромэн, курица, гренки, пармезан, соус «Цезарь».","zh":"罗马生菜、鸡肉、面包丁、帕尔玛干酪、凯撒酱。","es":"Lechuga romana, pollo, picatostes, parmesano, salsa césar."},"allergens":[1,7]},
+      {"name":{"it":"Nordica","en":"Nordic","ko":"노르딕","ru":"«Нордика»","zh":"北欧风","es":"Nórdica"},"price":"14","desc":{"it":"Salmone affumicato, rucola, feta, pomodorini, vinaigrette al limone.","en":"Smoked salmon, rocket, feta, cherry tomatoes, lemon vinaigrette.","ko":"훈제 연어, 루꼴라, 페타 치즈, 방울토마토, 레몬 비네그레트.","ru":"Копчёный лосось, руккола, фета, помидоры черри, лимонный винегрет.","zh":"熏三文鱼、火箭菜、菲达奶酪、樱桃番茄、柠檬醋汁。","es":"Salmón ahumado, rúcula, feta, tomates cherry, vinagreta de limón."},"allergens":[4,7,12]},
+      {"name":{"it":"Vegetariana","en":"Vegetarian","ko":"채식","ru":"Вегетарианский","zh":"素食沙拉","es":"Vegetariana"},"price":"13","desc":{"it":"Lattuga, carote, sedano, cetrioli, pomodorini, olive e mais.","en":"Lettuce, carrots, celery, cucumber, cherry tomatoes, olives and corn.","ko":"양상추, 당근, 셀러리, 오이, 방울토마토, 올리브, 옥수수.","ru":"Салат, морковь, сельдерей, огурцы, помидоры черри, оливки и кукуруза.","zh":"生菜、胡萝卜、芹菜、黄瓜、樱桃番茄、橄榄和玉米。","es":"Lechuga, zanahorias, apio, pepino, tomates cherry, aceitunas y maíz."},"allergens":[9]},
+      {"name":{"it":"Orto e cereali","en":"Garden and grains","ko":"채소와 곡물","ru":"Овощи и злаки","zh":"蔬菜与谷物","es":"Huerto y cereales"},"price":"12","desc":{"it":"Lattuga, cereali, verdure, quinoa, olio extravergine di oliva.","en":"Lettuce, grains, vegetables, quinoa, extra virgin olive oil.","ko":"양상추, 곡물, 채소, 퀴노아, 엑스트라 버진 올리브 오일.","ru":"Салат, злаки, овощи, киноа, оливковое масло extra virgin.","zh":"生菜、谷物、蔬菜、藜麦、特级初榨橄榄油。","es":"Lechuga, cereales, verduras, quinoa, aceite de oliva virgen extra."},"allergens":[1]},
+      {"name":"Panzanella","price":"14","desc":{"it":"Pomodori, pane raffermo, cetrioli, cipolla rossa, basilico, olio extravergine d'oliva.","en":"Tomatoes, stale bread, cucumber, red onion, basil, extra virgin olive oil.","ko":"토마토, 마른 빵, 오이, 적양파, 바질, 엑스트라 버진 올리브 오일.","ru":"Помидоры, чёрствый хлеб, огурцы, красный лук, базилик, оливковое масло extra virgin.","zh":"番茄、硬面包、黄瓜、红洋葱、罗勒、特级初榨橄榄油。","es":"Tomates, pan duro, pepino, cebolla roja, albahaca, aceite de oliva virgen extra."},"allergens":[1]},
+      {"name":{"it":"Nizzarda","en":"Niçoise","ko":"니수아즈","ru":"«Ниццарда»","zh":"尼斯沙拉","es":"Nizarda"},"price":"15","desc":{"it":"Tonno, uovo sodo, patate, olive e olio extravergine d'oliva.","en":"Tuna, hard-boiled egg, potatoes, olives and extra virgin olive oil.","ko":"참치, 삶은 달걀, 감자, 올리브, 엑스트라 버진 올리브 오일.","ru":"Тунец, варёное яйцо, картофель, оливки и оливковое масло extra virgin.","zh":"金枪鱼、水煮蛋、土豆、橄榄和特级初榨橄榄油。","es":"Atún, huevo duro, patatas, aceitunas y aceite de oliva virgen extra."},"allergens":[1,3,4]}
     ]},
-    {"id":"pizza","title":{"it":"Pizza","en":"Pizza","ko":"피자","ru":"Пицца"},"items":[
-      {"name":{"it":"Margherita","en":"Margherita","ko":"마르게리타","ru":"Маргерита"},"price":"10","desc":{"it":"Pomodoro, mozzarella, basilico.","en":"Tomato, mozzarella, basil.","ko":"토마토, 모차렐라, 바질.","ru":"Томат, моцарелла, базилик."},"allergens":[1,7]},
-      {"name":{"it":"Piccante","en":"Piccante","ko":"피칸테","ru":"Пикканте"},"price":"12","desc":{"it":"Pomodoro, mozzarella, salame piccante.","en":"Tomato, mozzarella, spicy salami.","ko":"토마토, 모차렐라, 매운 살라미.","ru":"Томат, моцарелла, острая салями."},"allergens":[1,7]},
-      {"name":{"it":"Crudo e pomodorini","en":"Crudo e pomodorini","ko":"크루도와 방울토마토","ru":"Крудо с помидорками"},"price":"13","desc":{"it":"Pomodoro, mozzarella, prosciutto crudo, pomodorini freschi.","en":"Tomato, mozzarella, cured ham, fresh cherry tomatoes.","ko":"토마토, 모차렐라, 생햄, 신선한 방울토마토.","ru":"Томат, моцарелла, прошутто крудо, свежие помидоры черри."},"allergens":[1,7]},
-      {"name":{"it":"Tonno e cipolla","en":"Tuna and onion","ko":"참치와 양파","ru":"Тунец с луком"},"price":"13","desc":{"it":"Pomodoro, mozzarella, tonno, cipolla.","en":"Tomato, mozzarella, tuna, onion.","ko":"토마토, 모차렐라, 참치, 양파.","ru":"Томат, моцарелла, тунец, лук."},"allergens":[1,4,7]},
-      {"name":{"it":"Prosciutto e funghi","en":"Ham and mushrooms","ko":"햄과 버섯","ru":"Ветчина с грибами"},"price":"13","desc":{"it":"Mozzarella, prosciutto cotto, funghi del bosco.","en":"Mozzarella, cooked ham, forest mushrooms.","ko":"모차렐라, 햄, 숲 버섯.","ru":"Моцарелла, варёная ветчина, лесные грибы."},"allergens":[1,7]},
-      {"name":{"it":"Al pecorino di Pienza e tartufo","en":"Pienza pecorino and truffle","ko":"피엔차 페코리노와 트러플","ru":"С пекорино из Пьенцы и трюфелем"},"price":"16","desc":{"it":"Pecorino di Pienza, tartufo fresco.","en":"Pienza pecorino, fresh truffle.","ko":"피엔차 페코리노, 신선한 트러플.","ru":"Пекорино из Пьенцы, свежий трюфель."},"allergens":[1,7]},
-      {"name":{"it":"Mortadella e pesto di pistacchi","en":"Mortadella and pistachio pesto","ko":"모르타델라와 피스타치오 페스토","ru":"Мортаделла с фисташковым соусом"},"price":"14","desc":{"it":"Mozzarella, mortadella, pesto di pistacchi.","en":"Mozzarella, mortadella, pistachio pesto.","ko":"모차렐라, 모르타델라, 피스타치오 페스토.","ru":"Моцарелла, мортаделла, соус из фисташек."},"allergens":[1,7,8]},
-      {"name":{"it":"Salsiccia e patate","en":"Sausage and potatoes","ko":"소시지와 감자","ru":"Сальсичча с картофелем"},"price":"13","desc":{"it":"Mozzarella, salsiccia, patate.","en":"Mozzarella, sausage, potatoes.","ko":"모차렐라, 소시지, 감자.","ru":"Моцарелла, сальсичча, картофель."},"allergens":[1,7]},
-      {"name":{"it":"Ortolana vegana","en":"Vegan garden pizza","ko":"비건 채소 피자","ru":"Веганская «Ортолана»"},"price":"13","desc":{"it":"Verdure di stagione, pomodorini freschi, olive, basilico.","en":"Seasonal vegetables, fresh cherry tomatoes, olives, basil.","ko":"제철 채소, 신선한 방울토마토, 올리브, 바질.","ru":"Сезонные овощи, свежие помидоры черри, оливки, базилик."},"allergens":[1]}
+    {"id":"pizza","title":{"it":"Pizza","en":"Pizza","ko":"피자","ru":"Пицца","zh":"比萨","es":"Pizza"},"items":[
+      {"name":{"it":"Margherita","en":"Margherita","ko":"마르게리타","ru":"Маргерита","zh":"玛格丽特","es":"Margherita"},"price":"10","desc":{"it":"Pomodoro, mozzarella, basilico.","en":"Tomato, mozzarella, basil.","ko":"토마토, 모차렐라, 바질.","ru":"Томат, моцарелла, базилик.","zh":"番茄、马苏里拉、罗勒。","es":"Tomate, mozzarella, albahaca."},"allergens":[1,7]},
+      {"name":{"it":"Piccante","en":"Piccante","ko":"피칸테","ru":"Пикканте","zh":"香辣","es":"Piccante"},"price":"12","desc":{"it":"Pomodoro, mozzarella, salame piccante.","en":"Tomato, mozzarella, spicy salami.","ko":"토마토, 모차렐라, 매운 살라미.","ru":"Томат, моцарелла, острая салями.","zh":"番茄、马苏里拉、辣味萨拉米。","es":"Tomate, mozzarella, salami picante."},"allergens":[1,7]},
+      {"name":{"it":"Crudo e pomodorini","en":"Crudo e pomodorini","ko":"크루도와 방울토마토","ru":"Крудо с помидорками","zh":"生火腿与樱桃番茄","es":"Crudo e pomodorini"},"price":"13","desc":{"it":"Pomodoro, mozzarella, prosciutto crudo, pomodorini freschi.","en":"Tomato, mozzarella, cured ham, fresh cherry tomatoes.","ko":"토마토, 모차렐라, 생햄, 신선한 방울토마토.","ru":"Томат, моцарелла, прошутто крудо, свежие помидоры черри.","zh":"番茄、马苏里拉、生火腿、新鲜樱桃番茄。","es":"Tomate, mozzarella, jamón serrano, tomates cherry frescos."},"allergens":[1,7]},
+      {"name":{"it":"Tonno e cipolla","en":"Tuna and onion","ko":"참치와 양파","ru":"Тунец с луком","zh":"金枪鱼与洋葱","es":"Atún y cebolla"},"price":"13","desc":{"it":"Pomodoro, mozzarella, tonno, cipolla.","en":"Tomato, mozzarella, tuna, onion.","ko":"토마토, 모차렐라, 참치, 양파.","ru":"Томат, моцарелла, тунец, лук.","zh":"番茄、马苏里拉、金枪鱼、洋葱。","es":"Tomate, mozzarella, atún, cebolla."},"allergens":[1,4,7]},
+      {"name":{"it":"Prosciutto e funghi","en":"Ham and mushrooms","ko":"햄과 버섯","ru":"Ветчина с грибами","zh":"火腿与蘑菇","es":"Jamón y champiñones"},"price":"13","desc":{"it":"Mozzarella, prosciutto cotto, funghi del bosco.","en":"Mozzarella, cooked ham, forest mushrooms.","ko":"모차렐라, 햄, 숲 버섯.","ru":"Моцарелла, варёная ветчина, лесные грибы.","zh":"马苏里拉、熟火腿、野生蘑菇。","es":"Mozzarella, jamón york, setas del bosque."},"allergens":[1,7]},
+      {"name":{"it":"Al pecorino di Pienza e tartufo","en":"Pienza pecorino and truffle","ko":"피엔차 페코리노와 트러플","ru":"С пекорино из Пьенцы и трюфелем","zh":"皮恩扎佩科里诺与松露","es":"Pecorino de Pienza y trufa"},"price":"16","desc":{"it":"Pecorino di Pienza, tartufo fresco.","en":"Pienza pecorino, fresh truffle.","ko":"피엔차 페코리노, 신선한 트러플.","ru":"Пекорино из Пьенцы, свежий трюфель.","zh":"皮恩扎佩科里诺、新鲜松露。","es":"Pecorino de Pienza, trufa fresca."},"allergens":[1,7]},
+      {"name":{"it":"Mortadella e pesto di pistacchi","en":"Mortadella and pistachio pesto","ko":"모르타델라와 피스타치오 페스토","ru":"Мортаделла с фисташковым соусом","zh":"莫尔塔德拉与开心果酱","es":"Mortadela y pesto de pistachos"},"price":"14","desc":{"it":"Mozzarella, mortadella, pesto di pistacchi.","en":"Mozzarella, mortadella, pistachio pesto.","ko":"모차렐라, 모르타델라, 피스타치오 페스토.","ru":"Моцарелла, мортаделла, соус из фисташек.","zh":"马苏里拉、莫尔塔德拉、开心果酱。","es":"Mozzarella, mortadela, pesto de pistachos."},"allergens":[1,7,8]},
+      {"name":{"it":"Salsiccia e patate","en":"Sausage and potatoes","ko":"소시지와 감자","ru":"Сальсичча с картофелем","zh":"香肠与土豆","es":"Salchicha y patatas"},"price":"13","desc":{"it":"Mozzarella, salsiccia, patate.","en":"Mozzarella, sausage, potatoes.","ko":"모차렐라, 소시지, 감자.","ru":"Моцарелла, сальсичча, картофель.","zh":"马苏里拉、香肠、土豆。","es":"Mozzarella, salchicha, patatas."},"allergens":[1,7]},
+      {"name":{"it":"Ortolana vegana","en":"Vegan garden pizza","ko":"비건 채소 피자","ru":"Веганская «Ортолана»","zh":"纯素菜园比萨","es":"Ortolana vegana"},"price":"13","desc":{"it":"Verdure di stagione, pomodorini freschi, olive, basilico.","en":"Seasonal vegetables, fresh cherry tomatoes, olives, basil.","ko":"제철 채소, 신선한 방울토마토, 올리브, 바질.","ru":"Сезонные овощи, свежие помидоры черри, оливки, базилик.","zh":"时令蔬菜、新鲜樱桃番茄、橄榄、罗勒。","es":"Verduras de temporada, tomates cherry frescos, aceitunas, albahaca."},"allergens":[1]}
     ]},
-    {"id":"dessert","title":{"it":"Dessert & Coppe Gelato","en":"Desserts & Sundaes","ko":"디저트 & 아이스크림","ru":"Десерты и мороженое"},"items":[
+    {"id":"dessert","title":{"it":"Dessert & Coppe Gelato","en":"Desserts & Sundaes","ko":"디저트 & 아이스크림","ru":"Десерты и мороженое","zh":"甜点 & 冰淇淋","es":"Postres & Copas de Gelato"},"items":[
       {"name":"Tiramisù","price":"6,00","desc":null,"allergens":[1,7]},
-      {"name":{"it":"Torte artigianali a fette","en":"Artisan cake (sliced)","ko":"수제 케이크 (슬라이스)","ru":"Домашние торты (нарезка)"},"price":"7,00","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Dolci al cucchiaio","en":"Spoon desserts","ko":"스푼 디저트","ru":"Десерты на ложке"},"price":"5,00","desc":null,"allergens":[7]},
-      {"name":{"it":"Semifreddo cheesecake e lampone","en":"Cheesecake and raspberry semifreddo","ko":"치즈케이크 라즈베리 세미프레도","ru":"Семифреддо чизкейк с малиной"},"price":"5,00","desc":null,"allergens":[1,3,7]},
-      {"name":{"it":"Coppa gelato classic 2 gusti","en":"Classic sundae — 2 flavours","ko":"클래식 젤라토 컵 (2가지 맛)","ru":"Мороженое классик (2 вкуса)"},"price":"5,00","desc":null,"allergens":[7]},
-      {"name":{"it":"Coppa gelato 5 Lune","en":"5 Lune sundae","ko":"5 루네 젤라토 컵","ru":"Мороженое «5 Lune»"},"price":"9,00","desc":{"it":"Crema, nocciola, cioccolato, nutella, panna, granella di nocciole.","en":"Vanilla custard, hazelnut, chocolate, Nutella, whipped cream, chopped hazelnuts.","ko":"커스터드 크림, 헤이즐넛, 초콜릿, 누텔라, 휘핑크림, 헤이즐넛 크럼블.","ru":"Крем, фундук, шоколад, Nutella, взбитые сливки, дроблёный фундук."},"allergens":[7,8]},
-      {"name":{"it":"Affogato alla fragola","en":"Strawberry affogato","ko":"딸기 아포가토","ru":"Аффогато с клубникой"},"price":"8,00","desc":{"it":"Fior di latte, fragola, fragole fresche, panna, salsa alla fragola.","en":"Fior di latte, strawberry, fresh strawberries, whipped cream, strawberry sauce.","ko":"피오르 디 라떼, 딸기, 생딸기, 휘핑크림, 딸기 소스.","ru":"Фиор ди латте, клубника, свежая клубника, взбитые сливки, клубничный соус."},"allergens":[7]},
-      {"name":{"it":"Affogato all'amarena","en":"Black cherry affogato","ko":"아마레나 체리 아포가토","ru":"Аффогато с вишней амарена"},"price":"8,00","desc":{"it":"Fior di latte, crema, panna, amarene, salsa all'amarena.","en":"Fior di latte, custard, whipped cream, black cherries, black cherry sauce.","ko":"피오르 디 라떼, 커스터드 크림, 휘핑크림, 아마레나 체리, 체리 소스.","ru":"Фиор ди латте, крем, взбитые сливки, вишня амарена, вишнёвый соус."},"allergens":[7]},
-      {"name":{"it":"Affogato al caffè","en":"Coffee affogato","ko":"커피 아포가토","ru":"Аффогато с кофе"},"price":"8,00","desc":{"it":"Crema, fior di latte, caffè espresso, panna.","en":"Custard, fior di latte, espresso coffee, whipped cream.","ko":"커스터드 크림, 피오르 디 라떼, 에스프레소, 휘핑크림.","ru":"Крем, фиор ди латте, эспрессо, взбитые сливки."},"allergens":[7]},
-      {"name":"Banana split","price":"10,00","desc":{"it":"Crema, cioccolato, fragola, frutta banana, panna, nutella, crumble.","en":"Custard, chocolate, strawberry, banana, whipped cream, Nutella, crumble.","ko":"커스터드 크림, 초콜릿, 딸기, 바나나, 휘핑크림, 누텔라, 크럼블.","ru":"Крем, шоколад, клубника, банан, взбитые сливки, Nutella, крамбл."},"allergens":[1,7,8]},
-      {"name":{"it":"Uovo al tegamino","en":"Fried egg sundae","ko":"프라이드 에그 선디","ru":"Мороженое «Яичница»"},"price":"10,00","desc":{"it":"Fior di latte, pesca sciroppata, panna, cacao.","en":"Fior di latte, syrup-poached peach, whipped cream, cocoa.","ko":"피오르 디 라떼, 시럽 복숭아, 휘핑크림, 코코아.","ru":"Фиор ди латте, персик в сиропе, взбитые сливки, какао."},"allergens":[7]},
-      {"name":{"it":"Spaghetti al pomodoro","en":"Spaghetti sundae","ko":"스파게티 선디","ru":"Мороженое «Спагетти»"},"price":"10,00","desc":{"it":"Crema, salsa alla fragola, cocco rapé.","en":"Custard, strawberry sauce, grated coconut.","ko":"커스터드 크림, 딸기 소스, 코코넛 가루.","ru":"Крем, клубничный соус, кокосовая стружка."},"allergens":[7]},
-      {"name":"Lotus","price":"10,00","desc":{"it":"Caramello salato, crema, salsa al caramello, crumble, biscotto lotus.","en":"Salted caramel, custard, caramel sauce, crumble, Lotus biscuit.","ko":"솔티드 카라멜, 커스터드 크림, 카라멜 소스, 크럼블, 로투스 비스킷.","ru":"Солёная карамель, крем, карамельный соус, крамбл, печенье Lotus."},"allergens":[1,7]},
-      {"name":{"it":"Milkshake Oreo","en":"Milkshake Oreo","ko":"오레오 밀크셰이크","ru":"Милкшейк Орео"},"price":"7,00","desc":null,"allergens":[1,7]},
-      {"name":{"it":"Frappè","en":"Frappé","ko":"프라페","ru":"Фраппе"},"price":"6,00","desc":null,"allergens":[7]}
+      {"name":{"it":"Torte artigianali a fette","en":"Artisan cake (sliced)","ko":"수제 케이크 (슬라이스)","ru":"Домашние торты (нарезка)","zh":"手工蛋糕（切片）","es":"Tarta artesanal (porción)"},"price":"7,00","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Dolci al cucchiaio","en":"Spoon desserts","ko":"스푼 디저트","ru":"Десерты на ложке","zh":"匙子甜点","es":"Postres de cuchara"},"price":"5,00","desc":null,"allergens":[7]},
+      {"name":{"it":"Semifreddo cheesecake e lampone","en":"Cheesecake and raspberry semifreddo","ko":"치즈케이크 라즈베리 세미프레도","ru":"Семифреддо чизкейк с малиной","zh":"芝士蛋糕树莓冰淇淋","es":"Semifrío cheesecake con frambuesa"},"price":"5,00","desc":null,"allergens":[1,3,7]},
+      {"name":{"it":"Coppa gelato classic 2 gusti","en":"Classic sundae — 2 flavours","ko":"클래식 젤라토 컵 (2가지 맛)","ru":"Мороженое классик (2 вкуса)","zh":"经典冰淇淋杯 — 2种口味","es":"Copa de gelato clásica — 2 sabores"},"price":"5,00","desc":null,"allergens":[7]},
+      {"name":{"it":"Coppa gelato 5 Lune","en":"5 Lune sundae","ko":"5 루네 젤라토 컵","ru":"Мороженое «5 Lune»","zh":"五月之月冰淇淋杯","es":"Copa de gelato 5 Lune"},"price":"9,00","desc":{"it":"Crema, nocciola, cioccolato, nutella, panna, granella di nocciole.","en":"Vanilla custard, hazelnut, chocolate, Nutella, whipped cream, chopped hazelnuts.","ko":"커스터드 크림, 헤이즐넛, 초콜릿, 누텔라, 휘핑크림, 헤이즐넛 크럼블.","ru":"Крем, фундук, шоколад, Nutella, взбитые сливки, дроблёный фундук.","zh":"奶油、榛子、巧克力、能多益、鲜奶油、榛子碎。","es":"Crema, avellana, chocolate, Nutella, nata montada, granillo de avellanas."},"allergens":[7,8]},
+      {"name":{"it":"Affogato alla fragola","en":"Strawberry affogato","ko":"딸기 아포가토","ru":"Аффогато с клубникой","zh":"草莓冰淇淋","es":"Affogato a la fresa"},"price":"8,00","desc":{"it":"Fior di latte, fragola, fragole fresche, panna, salsa alla fragola.","en":"Fior di latte, strawberry, fresh strawberries, whipped cream, strawberry sauce.","ko":"피오르 디 라떼, 딸기, 생딸기, 휘핑크림, 딸기 소스.","ru":"Фиор ди латте, клубника, свежая клубника, взбитые сливки, клубничный соус.","zh":"牛奶冰淇淋、草莓冰淇淋、新鲜草莓、鲜奶油、草莓酱。","es":"Fior di latte, fresa, fresas frescas, nata montada, salsa de fresa."},"allergens":[7]},
+      {"name":{"it":"Affogato all'amarena","en":"Black cherry affogato","ko":"아마레나 체리 아포가토","ru":"Аффогато с вишней амарена","zh":"酸樱桃冰淇淋","es":"Affogato a la guinda"},"price":"8,00","desc":{"it":"Fior di latte, crema, panna, amarene, salsa all'amarena.","en":"Fior di latte, custard, whipped cream, black cherries, black cherry sauce.","ko":"피오르 디 라떼, 커스터드 크림, 휘핑크림, 아마레나 체리, 체리 소스.","ru":"Фиор ди латте, крем, взбитые сливки, вишня амарена, вишнёвый соус.","zh":"牛奶冰淇淋、奶油冰淇淋、鲜奶油、酸樱桃、樱桃酱。","es":"Fior di latte, crema, nata montada, guindas, salsa de guinda."},"allergens":[7]},
+      {"name":{"it":"Affogato al caffè","en":"Coffee affogato","ko":"커피 아포가토","ru":"Аффогато с кофе","zh":"咖啡冰淇淋","es":"Affogato al café"},"price":"8,00","desc":{"it":"Crema, fior di latte, caffè espresso, panna.","en":"Custard, fior di latte, espresso coffee, whipped cream.","ko":"커스터드 크림, 피오르 디 라떼, 에스프레소, 휘핑크림.","ru":"Крем, фиор ди латте, эспрессо, взбитые сливки.","zh":"奶油冰淇淋、牛奶冰淇淋、浓缩咖啡、鲜奶油。","es":"Crema, fior di latte, café espresso, nata montada."},"allergens":[7]},
+      {"name":"Banana split","price":"10,00","desc":{"it":"Crema, cioccolato, fragola, frutta banana, panna, nutella, crumble.","en":"Custard, chocolate, strawberry, banana, whipped cream, Nutella, crumble.","ko":"커스터드 크림, 초콜릿, 딸기, 바나나, 휘핑크림, 누텔라, 크럼블.","ru":"Крем, шоколад, клубника, банан, взбитые сливки, Nutella, крамбл.","zh":"奶油、巧克力、草莓、香蕉、鲜奶油、能多益、脆碎。","es":"Crema, chocolate, fresa, plátano, nata montada, Nutella, crumble."},"allergens":[1,7,8]},
+      {"name":{"it":"Uovo al tegamino","en":"Fried egg sundae","ko":"프라이드 에그 선디","ru":"Мороженое «Яичница»","zh":"煎蛋圣代","es":"Copa huevo frito"},"price":"10,00","desc":{"it":"Fior di latte, pesca sciroppata, panna, cacao.","en":"Fior di latte, syrup-poached peach, whipped cream, cocoa.","ko":"피오르 디 라떼, 시럽 복숭아, 휘핑크림, 코코아.","ru":"Фиор ди латте, персик в сиропе, взбитые сливки, какао.","zh":"牛奶冰淇淋、糖水桃子、鲜奶油、可可粉。","es":"Fior di latte, melocotón en almíbar, nata montada, cacao."},"allergens":[7]},
+      {"name":{"it":"Spaghetti al pomodoro","en":"Spaghetti sundae","ko":"스파게티 선디","ru":"Мороженое «Спагетти»","zh":"番茄意面圣代","es":"Copa espagueti"},"price":"10,00","desc":{"it":"Crema, salsa alla fragola, cocco rapé.","en":"Custard, strawberry sauce, grated coconut.","ko":"커스터드 크림, 딸기 소스, 코코넛 가루.","ru":"Крем, клубничный соус, кокосовая стружка.","zh":"奶油冰淇淋、草莓酱、椰蓉。","es":"Crema, salsa de fresa, coco rallado."},"allergens":[7]},
+      {"name":"Lotus","price":"10,00","desc":{"it":"Caramello salato, crema, salsa al caramello, crumble, biscotto lotus.","en":"Salted caramel, custard, caramel sauce, crumble, Lotus biscuit.","ko":"솔티드 카라멜, 커스터드 크림, 카라멜 소스, 크럼블, 로투스 비스킷.","ru":"Солёная карамель, крем, карамельный соус, крамбл, печенье Lotus.","zh":"盐焦糖、奶油冰淇淋、焦糖酱、脆碎、莲花饼干。","es":"Caramelo salado, crema, salsa de caramelo, crumble, galleta Lotus."},"allergens":[1,7]},
+      {"name":{"it":"Milkshake Oreo","en":"Milkshake Oreo","ko":"오레오 밀크셰이크","ru":"Милкшейк Орео","zh":"奥利奥奶昔","es":"Milkshake Oreo"},"price":"7,00","desc":null,"allergens":[1,7]},
+      {"name":{"it":"Frappè","en":"Frappé","ko":"프라페","ru":"Фраппе","zh":"冷饮","es":"Frappé"},"price":"6,00","desc":null,"allergens":[7]}
     ]},
-    {"id":"caffe","title":{"it":"Caffè & Tè","en":"Coffee & Tea","ko":"커피 & 차","ru":"Кофе и чай"},"items":[
-      {"name":{"it":"Caffè","en":"Espresso","ko":"에스프레소","ru":"Эспрессо"},"price":"2,30","desc":null},
-      {"name":{"it":"Caffè macchiato","en":"Macchiato","ko":"마키아토","ru":"Макиато"},"price":"2,50","desc":null},
-      {"name":{"it":"Caffè corretto","en":"Espresso with liqueur","ko":"코레토 (리큐어 에스프레소)","ru":"Эспрессо с ликёром"},"price":"3,50","desc":null},
-      {"name":{"it":"Caffè americano","en":"Americano","ko":"아메리카노","ru":"Американо"},"price":"3,50","desc":null},
-      {"name":{"it":"Caffè e panna","en":"Espresso with cream","ko":"크림 에스프레소","ru":"Эспрессо со сливками"},"price":"3,00","desc":null},
-      {"name":{"it":"Caffè shakerato","en":"Iced shaken espresso","ko":"셰이크 에스프레소","ru":"Шейкерато"},"price":"4,00","desc":null},
-      {"name":{"it":"Cappuccino (latte o soia)","en":"Cappuccino (milk or soy)","ko":"카푸치노 (우유 또는 두유)","ru":"Капучино (молоко или соевое)"},"price":"3,50","desc":null},
-      {"name":{"it":"Latte macchiato","en":"Latte macchiato","ko":"라떼 마키아토","ru":"Латте макиато"},"price":"3,50","desc":null},
+    {"id":"caffe","title":{"it":"Caffè & Tè","en":"Coffee & Tea","ko":"커피 & 차","ru":"Кофе и чай","zh":"咖啡 & 茶","es":"Café & Té"},"items":[
+      {"name":{"it":"Caffè","en":"Espresso","ko":"에스프레소","ru":"Эспрессо","zh":"浓缩咖啡","es":"Café espresso"},"price":"2,30","desc":null},
+      {"name":{"it":"Caffè macchiato","en":"Macchiato","ko":"마키아토","ru":"Макиато","zh":"玛奇朵","es":"Café macchiato"},"price":"2,50","desc":null},
+      {"name":{"it":"Caffè corretto","en":"Espresso with liqueur","ko":"코레토 (리큐어 에스프레소)","ru":"Эспрессо с ликёром","zh":"加酒浓缩咖啡","es":"Café corretto"},"price":"3,50","desc":null},
+      {"name":{"it":"Caffè americano","en":"Americano","ko":"아메리카노","ru":"Американо","zh":"美式咖啡","es":"Café americano"},"price":"3,50","desc":null},
+      {"name":{"it":"Caffè e panna","en":"Espresso with cream","ko":"크림 에스프레소","ru":"Эспрессо со сливками","zh":"浓缩咖啡配奶油","es":"Café con nata"},"price":"3,00","desc":null},
+      {"name":{"it":"Caffè shakerato","en":"Iced shaken espresso","ko":"셰이크 에스프레소","ru":"Шейкерато","zh":"摇摇冰咖啡","es":"Café shakerato"},"price":"4,00","desc":null},
+      {"name":{"it":"Cappuccino (latte o soia)","en":"Cappuccino (milk or soy)","ko":"카푸치노 (우유 또는 두유)","ru":"Капучино (молоко или соевое)","zh":"卡布奇诺（牛奶或豆浆）","es":"Capuchino (leche o soja)"},"price":"3,50","desc":null},
+      {"name":{"it":"Latte macchiato","en":"Latte macchiato","ko":"라떼 마키아토","ru":"Латте макиато","zh":"拿铁玛奇朵","es":"Latte macchiato"},"price":"3,50","desc":null},
       {"name":"Macchiatone","price":"3,50","desc":null},
-      {"name":{"it":"Caffè latte","en":"Caffè latte","ko":"카페 라떼","ru":"Кафе латте"},"price":"3,50","desc":null},
-      {"name":{"it":"Decaffeinato","en":"Decaf","ko":"디카페인","ru":"Без кофеина"},"price":"2,30","desc":null},
-      {"name":{"it":"Ginseng piccolo","en":"Ginseng coffee (small)","ko":"인삼 커피 (소)","ru":"Женьшень кофе (маленький)"},"price":"2,50","desc":null},
-      {"name":{"it":"Ginseng grande","en":"Ginseng coffee (large)","ko":"인삼 커피 (대)","ru":"Женьшень кофе (большой)"},"price":"3,50","desc":null},
-      {"name":{"it":"Orzo piccolo","en":"Barley coffee (small)","ko":"보리 커피 (소)","ru":"Ячменный кофе (маленький)"},"price":"2,50","desc":null},
-      {"name":{"it":"Orzo grande","en":"Barley coffee (large)","ko":"보리 커피 (대)","ru":"Ячменный кофе (большой)"},"price":"3,50","desc":null},
-      {"name":{"it":"Tea & tisane","en":"Tea & herbal tea","ko":"차 & 허브티","ru":"Чай и травяные чаи"},"price":"4,00","desc":null},
-      {"name":{"it":"Spremuta di arancia","en":"Fresh orange juice","ko":"생 오렌지 주스","ru":"Свежевыжатый апельсиновый сок"},"price":"5,00","desc":null},
-      {"name":{"it":"Centrifughe frutta e verdura","en":"Fruit & vegetable juice","ko":"과일 & 채소 착즙 주스","ru":"Фреши из фруктов и овощей"},"price":"6,00","desc":null}
+      {"name":{"it":"Caffè latte","en":"Caffè latte","ko":"카페 라떼","ru":"Кафе латте","zh":"咖啡拿铁","es":"Café con leche"},"price":"3,50","desc":null},
+      {"name":{"it":"Decaffeinato","en":"Decaf","ko":"디카페인","ru":"Без кофеина","zh":"无咖啡因","es":"Descafeinado"},"price":"2,30","desc":null},
+      {"name":{"it":"Ginseng piccolo","en":"Ginseng coffee (small)","ko":"인삼 커피 (소)","ru":"Женьшень кофе (маленький)","zh":"人参咖啡（小）","es":"Café de ginseng (pequeño)"},"price":"2,50","desc":null},
+      {"name":{"it":"Ginseng grande","en":"Ginseng coffee (large)","ko":"인삼 커피 (대)","ru":"Женьшень кофе (большой)","zh":"人参咖啡（大）","es":"Café de ginseng (grande)"},"price":"3,50","desc":null},
+      {"name":{"it":"Orzo piccolo","en":"Barley coffee (small)","ko":"보리 커피 (소)","ru":"Ячменный кофе (маленький)","zh":"大麦咖啡（小）","es":"Café de cebada (pequeño)"},"price":"2,50","desc":null},
+      {"name":{"it":"Orzo grande","en":"Barley coffee (large)","ko":"보리 커피 (대)","ru":"Ячменный кофе (большой)","zh":"大麦咖啡（大）","es":"Café de cebada (grande)"},"price":"3,50","desc":null},
+      {"name":{"it":"Tea & tisane","en":"Tea & herbal tea","ko":"차 & 허브티","ru":"Чай и травяные чаи","zh":"茶 & 花草茶","es":"Té & tisanas"},"price":"4,00","desc":null},
+      {"name":{"it":"Spremuta di arancia","en":"Fresh orange juice","ko":"생 오렌지 주스","ru":"Свежевыжатый апельсиновый сок","zh":"鲜榨橙汁","es":"Zumo de naranja natural"},"price":"5,00","desc":null},
+      {"name":{"it":"Centrifughe frutta e verdura","en":"Fruit & vegetable juice","ko":"과일 & 채소 착즙 주스","ru":"Фреши из фруктов и овощей","zh":"果蔬冷压汁","es":"Zumos de frutas y verduras"},"price":"6,00","desc":null}
     ]},
-    {"id":"bevande","title":{"it":"Bevande","en":"Soft Drinks","ko":"음료","ru":"Безалкогольные напитки"},"items":[
-      {"name":{"it":"Acqua naturale 1L","en":"Still water 1L","ko":"생수 1L","ru":"Вода без газа 1л"},"price":"2,20","desc":null},
-      {"name":{"it":"Acqua frizzante 1L","en":"Sparkling water 1L","ko":"탄산수 1L","ru":"Газированная вода 1л"},"price":"2,20","desc":null},
-      {"name":{"it":"Acqua naturale 0,5L","en":"Still water 0.5L","ko":"생수 0.5L","ru":"Вода без газа 0,5л"},"price":"1,70","desc":null},
-      {"name":{"it":"Acqua frizzante 0,5L","en":"Sparkling water 0.5L","ko":"탄산수 0.5L","ru":"Газированная вода 0,5л"},"price":"1,70","desc":null},
+    {"id":"bevande","title":{"it":"Bevande","en":"Soft Drinks","ko":"음료","ru":"Безалкогольные напитки","zh":"饮料","es":"Bebidas"},"items":[
+      {"name":{"it":"Acqua naturale 1L","en":"Still water 1L","ko":"생수 1L","ru":"Вода без газа 1л","zh":"矿泉水 1L","es":"Agua sin gas 1L"},"price":"2,20","desc":null},
+      {"name":{"it":"Acqua frizzante 1L","en":"Sparkling water 1L","ko":"탄산수 1L","ru":"Газированная вода 1л","zh":"气泡水 1L","es":"Agua con gas 1L"},"price":"2,20","desc":null},
+      {"name":{"it":"Acqua naturale 0,5L","en":"Still water 0.5L","ko":"생수 0.5L","ru":"Вода без газа 0,5л","zh":"矿泉水 0,5L","es":"Agua sin gas 0,5L"},"price":"1,70","desc":null},
+      {"name":{"it":"Acqua frizzante 0,5L","en":"Sparkling water 0.5L","ko":"탄산수 0.5L","ru":"Газированная вода 0,5л","zh":"气泡水 0,5L","es":"Agua con gas 0,5L"},"price":"1,70","desc":null},
       {"name":"Coca Cola 330ml","price":"4,00","desc":null},{"name":"Coca Cola 0,5L","price":"4,50","desc":null},
-      {"name":{"it":"Aranciata 275ml","en":"Orangeade 275ml","ko":"오렌지에이드 275ml","ru":"Апельсиновый лимонад 275мл"},"price":"4,00","desc":null},
+      {"name":{"it":"Aranciata 275ml","en":"Orangeade 275ml","ko":"오렌지에이드 275ml","ru":"Апельсиновый лимонад 275мл","zh":"橙汁汽水 275ml","es":"Naranjada 275ml"},"price":"4,00","desc":null},
       {"name":"Chinotto 275ml","price":"4,00","desc":null},
-      {"name":{"it":"Limonata 275ml","en":"Lemonade 275ml","ko":"레모네이드 275ml","ru":"Лимонад 275мл"},"price":"4,00","desc":null},
-      {"name":{"it":"Tonica 0,20L","en":"Tonic water 0.2L","ko":"토닉워터 0.2L","ru":"Тоник 0,2л"},"price":"4,00","desc":null},
-      {"name":{"it":"Succhi di frutta","en":"Fruit juices","ko":"과일 주스","ru":"Фруктовые соки"},"price":"3,50","desc":null}
+      {"name":{"it":"Limonata 275ml","en":"Lemonade 275ml","ko":"레모네이드 275ml","ru":"Лимонад 275мл","zh":"柠檬水 275ml","es":"Limonada 275ml"},"price":"4,00","desc":null},
+      {"name":{"it":"Tonica 0,20L","en":"Tonic water 0.2L","ko":"토닉워터 0.2L","ru":"Тоник 0,2л","zh":"汤力水 0,2L","es":"Agua tónica 0,2L"},"price":"4,00","desc":null},
+      {"name":{"it":"Succhi di frutta","en":"Fruit juices","ko":"과일 주스","ru":"Фруктовые соки","zh":"果汁","es":"Zumos de fruta"},"price":"3,50","desc":null}
     ]},
-    {"id":"birre","title":{"it":"Birre","en":"Beers","ko":"맥주","ru":"Пиво"},"items":[
+    {"id":"birre","title":{"it":"Birre","en":"Beers","ko":"맥주","ru":"Пиво","zh":"啤酒","es":"Cervezas"},"items":[
       {"name":"Ceres 330ml","price":"5,00","desc":null},{"name":"Corona 330ml","price":"5,00","desc":null},
-      {"name":{"it":"Birra artigianale Olmaia n.5 330ml","en":"Craft beer Olmaia no.5 330ml","ko":"수제 맥주 Olmaia n.5 330ml","ru":"Крафтовое пиво Olmaia n.5 330мл"},"price":"7,00","desc":null},
-      {"name":{"it":"Birra artigianale Olmaia n.9 330ml","en":"Craft beer Olmaia no.9 330ml","ko":"수제 맥주 Olmaia n.9 330ml","ru":"Крафтовое пиво Olmaia n.9 330мл"},"price":"7,00","desc":null},
-      {"name":{"it":"Birra Messina alla spina 0,2L","en":"Messina draught beer 0.2L","ko":"메시나 생맥주 0.2L","ru":"Messina разливное 0,2л"},"price":"4,00","desc":null},
-      {"name":{"it":"Birra Messina alla spina 0,4L","en":"Messina draught beer 0.4L","ko":"메시나 생맥주 0.4L","ru":"Messina разливное 0,4л"},"price":"7,00","desc":null}
+      {"name":{"it":"Birra artigianale Olmaia n.5 330ml","en":"Craft beer Olmaia no.5 330ml","ko":"수제 맥주 Olmaia n.5 330ml","ru":"Крафтовое пиво Olmaia n.5 330мл","zh":"精酿啤酒 Olmaia n.5 330ml","es":"Cerveza artesanal Olmaia n.5 330ml"},"price":"7,00","desc":null},
+      {"name":{"it":"Birra artigianale Olmaia n.9 330ml","en":"Craft beer Olmaia no.9 330ml","ko":"수제 맥주 Olmaia n.9 330ml","ru":"Крафтовое пиво Olmaia n.9 330мл","zh":"精酿啤酒 Olmaia n.9 330ml","es":"Cerveza artesanal Olmaia n.9 330ml"},"price":"7,00","desc":null},
+      {"name":{"it":"Birra Messina alla spina 0,2L","en":"Messina draught beer 0.2L","ko":"메시나 생맥주 0.2L","ru":"Messina разливное 0,2л","zh":"Messina生啤 0,2L","es":"Cerveza Messina de barril 0,2L"},"price":"4,00","desc":null},
+      {"name":{"it":"Birra Messina alla spina 0,4L","en":"Messina draught beer 0.4L","ko":"메시나 생맥주 0.4L","ru":"Messina разливное 0,4л","zh":"Messina生啤 0,4L","es":"Cerveza Messina de barril 0,4L"},"price":"7,00","desc":null}
     ]},
-    {"id":"aperitivi","title":{"it":"Aperitivi","en":"Aperitifs","ko":"아페리티보","ru":"Аперитивы"},"items":[
-      {"_subsection":{"it":"Aperitivi & cocktail","en":"Aperitifs & cocktails","ko":"아페리티보 & 칵테일","ru":"Аперитивы и коктейли"}},
+    {"id":"aperitivi","title":{"it":"Aperitivi","en":"Aperitifs","ko":"아페리티보","ru":"Аперитивы","zh":"开胃酒","es":"Aperitivos"},"items":[
+      {"_subsection":{"it":"Aperitivi & cocktail","en":"Aperitifs & cocktails","ko":"아페리티보 & 칵테일","ru":"Аперитивы и коктейли","zh":"开胃酒 & 鸡尾酒","es":"Aperitivos & cócteles"}},
       {"name":"Crodino","price":"4,00","desc":null},{"name":"Campari soda","price":"4,00","desc":null},
       {"name":"Bitter rosso","price":"4,00","desc":null},{"name":"Spritz","price":"7,00","desc":null},
       {"name":"Campari spritz","price":"7,00","desc":null},
-      {"name":{"it":"Negroni toscano","en":"Tuscan Negroni","ko":"토스카나 네그로니","ru":"Тосканский негрони"},"price":"9,00","desc":null},
+      {"name":{"it":"Negroni toscano","en":"Tuscan Negroni","ko":"토스카나 네그로니","ru":"Тосканский негрони","zh":"托斯卡纳内格罗尼","es":"Negroni toscano"},"price":"9,00","desc":null},
       {"name":"Mojito","price":"8,00","desc":null},{"name":"Hugo","price":"8,00","desc":null},
       {"name":"Old fashioned","price":"9,00","desc":null},{"name":"Moscow mule","price":"9,00","desc":null},
       {"name":"Margarita","price":"8,00","desc":null},{"name":"Piña colada","price":"9,00","desc":null},
-      {"name":{"it":"Gin tonic classico","en":"Classic gin & tonic","ko":"클래식 진 토닉","ru":"Классический джин-тоник"},"price":"8,00","desc":null},
-      {"name":{"it":"Gin tonic premium","en":"Premium gin & tonic","ko":"프리미엄 진 토닉","ru":"Премиум джин-тоник"},"price":"15,00","desc":null},
-      {"_subsection":{"it":"Analcolici","en":"Non-alcoholic","ko":"무알콜","ru":"Безалкогольные"}},
+      {"name":{"it":"Gin tonic classico","en":"Classic gin & tonic","ko":"클래식 진 토닉","ru":"Классический джин-тоник","zh":"经典金汤力","es":"Gin tonic clásico"},"price":"8,00","desc":null},
+      {"name":{"it":"Gin tonic premium","en":"Premium gin & tonic","ko":"프리미엄 진 토닉","ru":"Премиум джин-тоник","zh":"高级金汤力","es":"Gin tonic premium"},"price":"15,00","desc":null},
+      {"_subsection":{"it":"Analcolici","en":"Non-alcoholic","ko":"무알콜","ru":"Безалкогольные","zh":"无酒精","es":"Sin alcohol"}},
       {"name":"Spritz","price":"6,00","desc":null},
       {"name":"Mojito","price":"7,00","desc":null},
-      {"name":{"it":"Piña colada","en":"Piña colada","ko":"피나 콜라다","ru":"Пина Колада"},"price":"8,00","desc":null},
-      {"_subsection":{"it":"Stuzzichini","en":"Nibbles","ko":"안주","ru":"Закуски к напиткам"}},
-      {"name":{"it":"Selezione di formaggi","en":"Cheese selection","ko":"치즈 셀렉션","ru":"Ассорти сыров"},"price":"10,00","desc":null,"allergens":[7]},
-      {"name":{"it":"Selezione di salumi","en":"Charcuterie selection","ko":"살루미 셀렉션","ru":"Ассорти салуми"},"price":"12,00","desc":null},
-      {"name":{"it":"Tagliere misto (2 persone)","en":"Mixed board (2 people)","ko":"믹스 보드 (2인)","ru":"Тальере мисто (на 2)"},"price":"18,00","desc":null,"allergens":[7]},
-      {"name":{"it":"Stuzzichini (2 persone)","en":"Nibbles (2 people)","ko":"안주 (2인)","ru":"Закуски (на 2)"},"price":"15,00","desc":null,"allergens":[1,3,4,5,7,8,9,10,11]},
-      {"name":{"it":"Bruschette miste","en":"Mixed bruschetta","ko":"모듬 브루스케타","ru":"Брускетты ассорти"},"price":"10,00","desc":null,"allergens":[1,3,4,5,7,8,9,10,11]}
+      {"name":{"it":"Piña colada","en":"Piña colada","ko":"피나 콜라다","ru":"Пина Колада","zh":"椰林飘香","es":"Piña colada"},"price":"8,00","desc":null},
+      {"_subsection":{"it":"Stuzzichini","en":"Nibbles","ko":"안주","ru":"Закуски к напиткам","zh":"小食","es":"Picoteo"}},
+      {"name":{"it":"Selezione di formaggi","en":"Cheese selection","ko":"치즈 셀렉션","ru":"Ассорти сыров","zh":"精选奶酪","es":"Selección de quesos"},"price":"10,00","desc":null,"allergens":[7]},
+      {"name":{"it":"Selezione di salumi","en":"Charcuterie selection","ko":"살루미 셀렉션","ru":"Ассорти салуми","zh":"精选熟食","es":"Selección de embutidos"},"price":"12,00","desc":null},
+      {"name":{"it":"Tagliere misto (2 persone)","en":"Mixed board (2 people)","ko":"믹스 보드 (2인)","ru":"Тальере мисто (на 2)","zh":"混合拼盘（2人）","es":"Tabla mixta (2 personas)"},"price":"18,00","desc":null,"allergens":[7]},
+      {"name":{"it":"Stuzzichini (2 persone)","en":"Nibbles (2 people)","ko":"안주 (2인)","ru":"Закуски (на 2)","zh":"小食（2人）","es":"Picoteo (2 personas)"},"price":"15,00","desc":null,"allergens":[1,3,4,5,7,8,9,10,11]},
+      {"name":{"it":"Bruschette miste","en":"Mixed bruschetta","ko":"모듬 브루스케타","ru":"Брускетты ассорти","zh":"什锦烤面包片","es":"Bruschette mixtas"},"price":"10,00","desc":null,"allergens":[1,3,4,5,7,8,9,10,11]}
     ]},
-    {"id":"vini","title":{"it":"Vini","en":"Wines","ko":"와인","ru":"Вина"},"items":[
-      {"_subsection":{"it":"Vini al calice & spina","en":"Wine by the glass & tap","ko":"잔 와인 & 생와인","ru":"Вино бокалами и из крана"}},
-      {"name":{"it":"Rosso della Casa Poliziano (calice)","en":"House Red Poliziano (glass)","ko":"하우스 레드 Poliziano (잔)","ru":"Красное домашнее Poliziano (бокал)"},"price":"5,00","desc":null},
-      {"name":{"it":"Rosso della Casa Poliziano 0,25L","en":"House Red Poliziano 0.25L","ko":"하우스 레드 Poliziano 0.25L","ru":"Красное домашнее Poliziano 0,25л"},"price":"6,00","desc":null},
-      {"name":{"it":"Rosso della Casa Poliziano 0,5L","en":"House Red Poliziano 0.5L","ko":"하우스 레드 Poliziano 0.5L","ru":"Красное домашнее Poliziano 0,5л"},"price":"8,00","desc":null},
-      {"name":{"it":"Rosso de Ricci Montepulciano (calice)","en":"Rosso de Ricci Montepulciano (glass)","ko":"Rosso de Ricci Montepulciano (잔)","ru":"Rosso de Ricci Montepulciano (бокал)"},"price":"6,00","desc":null},
-      {"name":{"it":"Nobile de Ricci Montepulciano (calice)","en":"Nobile de Ricci Montepulciano (glass)","ko":"Nobile de Ricci Montepulciano (잔)","ru":"Nobile de Ricci Montepulciano (бокал)"},"price":"10,00","desc":null},
-      {"name":{"it":"Rosé de Ricci Montepulciano (calice)","en":"Rosé de Ricci Montepulciano (glass)","ko":"Rosé de Ricci Montepulciano (잔)","ru":"Rosé de Ricci Montepulciano (бокал)"},"price":"6,00","desc":null},
-      {"name":{"it":"Bianco Toscano (calice)","en":"White Tuscan (glass)","ko":"토스카나 화이트 (잔)","ru":"Белое тосканское (бокал)"},"price":"5,00","desc":null},
-      {"name":{"it":"Bianco Toscano 0,25L","en":"White Tuscan 0.25L","ko":"토스카나 화이트 0.25L","ru":"Белое тосканское 0,25л"},"price":"6,00","desc":null},
-      {"name":{"it":"Bianco Toscano 0,5L","en":"White Tuscan 0.5L","ko":"토스카나 화이트 0.5L","ru":"Белое тосканское 0,5л"},"price":"8,00","desc":null},
-      {"name":{"it":"Ribolla Gialla Alturis (calice)","en":"Ribolla Gialla Alturis (glass)","ko":"Ribolla Gialla Alturis (잔)","ru":"Ribolla Gialla Alturis (бокал)"},"price":"6,00","desc":null},
-      {"name":{"it":"Prosecco DOC Corte delle Calli (calice)","en":"Prosecco DOC Corte delle Calli (glass)","ko":"Prosecco DOC Corte delle Calli (잔)","ru":"Prosecco DOC Corte delle Calli (бокал)"},"price":"6,00","desc":null},
-      {"_subsection":{"it":"Rossi in bottiglia","en":"Red wines — bottle","ko":"레드 와인 (병)","ru":"Красные вина (бутылка)"}},
+    {"id":"vini","title":{"it":"Vini","en":"Wines","ko":"와인","ru":"Вина","zh":"葡萄酒","es":"Vinos"},"items":[
+      {"_subsection":{"it":"Vini al calice & spina","en":"Wine by the glass & tap","ko":"잔 와인 & 생와인","ru":"Вино бокалами и из крана","zh":"杯装及桶装葡萄酒","es":"Vinos por copa & grifo"}},
+      {"name":{"it":"Rosso della Casa Poliziano (calice)","en":"House Red Poliziano (glass)","ko":"하우스 레드 Poliziano (잔)","ru":"Красное домашнее Poliziano (бокал)","zh":"自家红葡萄酒 Poliziano（杯）","es":"Tinto de la casa Poliziano (copa)"},"price":"5,00","desc":null},
+      {"name":{"it":"Rosso della Casa Poliziano 0,25L","en":"House Red Poliziano 0.25L","ko":"하우스 레드 Poliziano 0.25L","ru":"Красное домашнее Poliziano 0,25л","zh":"自家红葡萄酒 Poliziano 0,25L","es":"Tinto de la casa Poliziano 0,25L"},"price":"6,00","desc":null},
+      {"name":{"it":"Rosso della Casa Poliziano 0,5L","en":"House Red Poliziano 0.5L","ko":"하우스 레드 Poliziano 0.5L","ru":"Красное домашнее Poliziano 0,5л","zh":"自家红葡萄酒 Poliziano 0,5L","es":"Tinto de la casa Poliziano 0,5L"},"price":"8,00","desc":null},
+      {"name":{"it":"Rosso de Ricci Montepulciano (calice)","en":"Rosso de Ricci Montepulciano (glass)","ko":"Rosso de Ricci Montepulciano (잔)","ru":"Rosso de Ricci Montepulciano (бокал)","zh":"Rosso de Ricci Montepulciano（杯）","es":"Rosso de Ricci Montepulciano (copa)"},"price":"6,00","desc":null},
+      {"name":{"it":"Nobile de Ricci Montepulciano (calice)","en":"Nobile de Ricci Montepulciano (glass)","ko":"Nobile de Ricci Montepulciano (잔)","ru":"Nobile de Ricci Montepulciano (бокал)","zh":"Nobile de Ricci Montepulciano（杯）","es":"Nobile de Ricci Montepulciano (copa)"},"price":"10,00","desc":null},
+      {"name":{"it":"Rosé de Ricci Montepulciano (calice)","en":"Rosé de Ricci Montepulciano (glass)","ko":"Rosé de Ricci Montepulciano (잔)","ru":"Rosé de Ricci Montepulciano (бокал)","zh":"Rosé de Ricci Montepulciano（杯）","es":"Rosé de Ricci Montepulciano (copa)"},"price":"6,00","desc":null},
+      {"name":{"it":"Bianco Toscano (calice)","en":"White Tuscan (glass)","ko":"토스카나 화이트 (잔)","ru":"Белое тосканское (бокал)","zh":"托斯卡纳白葡萄酒（杯）","es":"Blanco toscano (copa)"},"price":"5,00","desc":null},
+      {"name":{"it":"Bianco Toscano 0,25L","en":"White Tuscan 0.25L","ko":"토스카나 화이트 0.25L","ru":"Белое тосканское 0,25л","zh":"托斯卡纳白葡萄酒 0,25L","es":"Blanco toscano 0,25L"},"price":"6,00","desc":null},
+      {"name":{"it":"Bianco Toscano 0,5L","en":"White Tuscan 0.5L","ko":"토스카나 화이트 0.5L","ru":"Белое тосканское 0,5л","zh":"托斯卡纳白葡萄酒 0,5L","es":"Blanco toscano 0,5L"},"price":"8,00","desc":null},
+      {"name":{"it":"Ribolla Gialla Alturis (calice)","en":"Ribolla Gialla Alturis (glass)","ko":"Ribolla Gialla Alturis (잔)","ru":"Ribolla Gialla Alturis (бокал)","zh":"Ribolla Gialla Alturis（杯）","es":"Ribolla Gialla Alturis (copa)"},"price":"6,00","desc":null},
+      {"name":{"it":"Prosecco DOC Corte delle Calli (calice)","en":"Prosecco DOC Corte delle Calli (glass)","ko":"Prosecco DOC Corte delle Calli (잔)","ru":"Prosecco DOC Corte delle Calli (бокал)","zh":"Prosecco DOC Corte delle Calli（杯）","es":"Prosecco DOC Corte delle Calli (copa)"},"price":"6,00","desc":null},
+      {"_subsection":{"it":"Rossi in bottiglia","en":"Red wines — bottle","ko":"레드 와인 (병)","ru":"Красные вина (бутылка)","zh":"瓶装红葡萄酒","es":"Tintos — botella"}},
       {"name":"Rosso de Ricci Montepulciano","price":"18,00","desc":null},
       {"name":"Nobile de Ricci Montepulciano","price":"27,00","desc":null},
       {"name":"Chianti Salcheto","price":"15,00","desc":null},
@@ -946,7 +948,7 @@
       {"name":"Pinot Nero Alturis","price":"18,00","desc":null},
       {"name":"Rosso Salcheto Montepulciano","price":"19,00","desc":null},
       {"name":"Nobile Salcheto Montepulciano","price":"25,00","desc":null},
-      {"_subsection":{"it":"Bianchi in bottiglia","en":"White wines — bottle","ko":"화이트 와인 (병)","ru":"Белые вина (бутылка)"}},
+      {"_subsection":{"it":"Bianchi in bottiglia","en":"White wines — bottle","ko":"화이트 와인 (병)","ru":"Белые вина (бутылка)","zh":"瓶装白葡萄酒","es":"Blancos — botella"}},
       {"name":"Ribolla Gialla Alturis","price":"17,00","desc":null},
       {"name":"Bianco Pojana Passerina","price":"16,00","desc":null},
       {"name":"Bianco Quirico Pecorino","price":"16,00","desc":null},
@@ -957,19 +959,19 @@
       {"name":"Prosecco Valdobbiadene","price":"19,00","desc":null},
       {"name":"Franciacorta Conti Ducco Cuvée","price":"25,00","desc":null},
       {"name":"Franciacorta Ca' del Bosco","price":"58,00","desc":null},
-      {"_subsection":{"it":"Liquori","en":"Spirits & liqueurs","ko":"리큐어 & 스피릿","ru":"Крепкие напитки и ликёры"}},
-      {"name":{"it":"Amari","en":"Amaro","ko":"아마로","ru":"Амаро"},"price":"4,00","desc":null},
+      {"_subsection":{"it":"Liquori","en":"Spirits & liqueurs","ko":"리큐어 & 스피릿","ru":"Крепкие напитки и ликёры","zh":"烈酒 & 利口酒","es":"Licores & destilados"}},
+      {"name":{"it":"Amari","en":"Amaro","ko":"아마로","ru":"Амаро","zh":"苦味利口酒","es":"Amaro"},"price":"4,00","desc":null},
       {"name":"Grappa","price":"4,50","desc":null},
       {"name":"Limoncello","price":"4,00","desc":null},{"name":"Whisky","price":"7,00","desc":null},
-      {"name":{"it":"Crema di Whisky","en":"Whisky cream","ko":"위스키 크림","ru":"Виски-крем"},"price":"4,50","desc":null},
+      {"name":{"it":"Crema di Whisky","en":"Whisky cream","ko":"위스키 크림","ru":"Виски-крем","zh":"威士忌奶油酒","es":"Crema de whisky"},"price":"4,50","desc":null},
       {"name":"Cognac","price":"7,00","desc":null},
       {"name":"Brandy","price":"7,00","desc":null},
-      {"name":{"it":"Cognac Invecchiato","en":"Aged Cognac","ko":"숙성 코냑","ru":"Выдержанный коньяк"},"price":"9,00","desc":null},
+      {"name":{"it":"Cognac Invecchiato","en":"Aged Cognac","ko":"숙성 코냑","ru":"Выдержанный коньяк","zh":"陈年干邑","es":"Coñac añejo"},"price":"9,00","desc":null},
       {"name":"Vin Santo","price":"5,00","desc":null}
     ]}
   ];
 
-  const LANG_LABELS = {it:'IT', en:'EN', ko:'KO', ru:'RU'};
+  const LANG_LABELS = {it:'IT', en:'EN', ko:'KO', ru:'RU', zh:'ZH', es:'ES'};
   let currentLang = localStorage.getItem('cl_lang') || 'it';
 
   function renderMenu(lang) {
@@ -1069,7 +1071,7 @@
   function setLang(lang) {
     currentLang = lang;
     localStorage.setItem('cl_lang', lang);
-    document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'it';
+    document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'ru' ? 'ru' : lang === 'zh' ? 'zh' : lang === 'es' ? 'es' : lang === 'en' ? 'en' : 'it';
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (UI[key] && UI[key][lang]) el.textContent = UI[key][lang];
